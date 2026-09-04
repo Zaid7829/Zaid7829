@@ -36,7 +36,14 @@
 ### `~/ 01. whoami`
 
 <div align="center">
-  <img src="./info-card.svg" width="760" alt="Zaid system specification card" />
+  <img src="./info-card.svg" width="760" alt="Zaid identity card" />
+  <p>
+    <sub><kbd>CURRENT BUILDS</kbd>&nbsp;&nbsp;
+      <a href="https://github.com/Zaid7829/Aura"><strong>◉ Aura</strong></a>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      <a href="https://github.com/Zaid7829/AgentFlow"><strong>◉ AgentFlow</strong></a>
+    </sub>
+  </p>
 </div>
 
 <br>

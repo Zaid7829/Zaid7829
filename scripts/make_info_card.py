@@ -1,118 +1,151 @@
 #!/usr/bin/env python3
 """
-Generate the unified terminal developer system information card for Zaid7829.
-Output: info-card.svg (760x760)
+Generate a compact, personal, memorable terminal identity card for Zaid.
+Specifications:
+- Section: ~/ 01. whoami
+- Communicates: AI Engineer · Full Stack Developer · Software Engineer · Problem Solver / Builder
+- Personal & authentic developer voice (zero corporate resume buzzwords)
+- Current Builds: Aura & AgentFlow with direct clickable links
+- Developer workflow: CODE → EXPERIMENT → BREAK → DEBUG → BUILD AGAIN
+- Compact size: 760x300 (drastically shorter than previous 760x760)
+- Terminal aesthetic: window controls, command prompt, dark mode theme
+- Output: info-card.svg
 """
 from __future__ import annotations
 import html
-import json
-import os
 from pathlib import Path
 
-PROFILE_PATH = Path("data/profile.json")
 OUTPUT_PATH = Path("info-card.svg")
 
-W, H = 760, 760
+W, H = 760, 304
 
 def esc(text: str) -> str:
     return html.escape(str(text), quote=True)
 
-def join_items(items: list[str], max_items: int = 5) -> str:
-    return " · ".join(items[:max_items])
-
-def main():
-    if not PROFILE_PATH.exists():
-        raise SystemExit(f"Missing {PROFILE_PATH}")
-        
-    p = json.loads(PROFILE_PATH.read_text(encoding="utf-8"))
-    static = os.getenv("STATIC") == "1"
+def generate_card():
+    lines = []
+    lines.append('<?xml version="1.0" encoding="UTF-8"?>')
+    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-label="Zaid — Identity Card">')
+    lines.append('  <title>Zaid — Identity Card</title>')
+    lines.append('  <desc>AI Engineer, Full Stack Developer, and Builder — Personal identity and current builds</desc>')
     
-    # Structured key-value rows
-    rows = [
-        ("USER", p.get("username", "Zaid7829"), "#E6EDF3"),
-        ("ROLE", p.get("role", "Full Stack Developer"), "#FF8C00"),
-        ("FOCUS", "Full-Stack Web · API Design · Architecture", "#E6EDF3"),
-        ("LANGS", join_items(p.get("languages", []), 6), "#C9D1D9"),
-        ("FRONTEND", join_items(p.get("frontend", []), 5), "#C9D1D9"),
-        ("BACKEND", join_items(p.get("backend", []), 5), "#C9D1D9"),
-        ("APIS", join_items(p.get("apis", []), 4), "#C9D1D9"),
-        ("DATABASE", join_items(p.get("data", []), 5), "#C9D1D9"),
-        ("CLOUD/OPS", join_items(p.get("cloud", []), 5), "#C9D1D9"),
-        ("TESTING", join_items(p.get("testing", []), 5), "#C9D1D9"),
-        ("AI / ML", join_items(p.get("ai", []), 4), "#C9D1D9"),
-        ("KERNEL", p.get("system", "x86_64 Full Stack Dev OS // kernel 6.x"), "#8B949E"),
-        ("STATUS", p.get("currently", "BUILDING · LEARNING · SHIPPING"), "#39D353"),
-    ]
+    # CSS Styles & Interactive Transitions
+    lines.append('  <style>')
+    lines.append('    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace; }')
+    lines.append('    .term-link {')
+    lines.append('      cursor: pointer;')
+    lines.append('      text-decoration: none;')
+    lines.append('    }')
+    lines.append('    .term-link .card-btn {')
+    lines.append('      fill: #161B22;')
+    lines.append('      stroke: #30363D;')
+    lines.append('      stroke-width: 1px;')
+    lines.append('      transition: fill 0.2s ease, stroke 0.2s ease;')
+    lines.append('    }')
+    lines.append('    .term-link:hover .card-btn {')
+    lines.append('      fill: #21262D;')
+    lines.append('      stroke: #58A6FF;')
+    lines.append('    }')
+    lines.append('    .term-link:hover .btn-text {')
+    lines.append('      fill: #58A6FF;')
+    lines.append('    }')
+    lines.append('    .cursor {')
+    lines.append('      animation: termBlink 0.8s step-end infinite;')
+    lines.append('    }')
+    lines.append('    @keyframes termBlink {')
+    lines.append('      0%, 100% { opacity: 1; }')
+    lines.append('      50% { opacity: 0; }')
+    lines.append('    }')
+    lines.append('  </style>')
     
-    parts = []
+    # Gradients
+    lines.append('  <defs>')
+    lines.append('    <radialGradient id="card-bg" cx="50%" cy="30%" r="80%">')
+    lines.append('      <stop offset="0%" stop-color="#111620"/>')
+    lines.append('      <stop offset="60%" stop-color="#0A0E14"/>')
+    lines.append('      <stop offset="100%" stop-color="#06080B"/>')
+    lines.append('    </radialGradient>')
+    lines.append('  </defs>')
     
-    # Container & Gradients
-    parts.append(f'''  <defs>
-    <radialGradient id="card-bg" cx="50%" cy="40%" r="75%">
-      <stop offset="0%" stop-color="#11151c"/>
-      <stop offset="55%" stop-color="#0a0d12"/>
-      <stop offset="100%" stop-color="#050608"/>
-    </radialGradient>
-  </defs>
-  
-  <!-- Terminal Outer Frame -->
-  <rect width="{W}" height="{H}" rx="18" fill="url(#card-bg)"/>
-  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="17" fill="none" stroke="#30363D" stroke-width="1.2"/>
-  
-  <!-- Top Terminal Bar -->
-  <rect x="1" y="1" width="{W-2}" height="42" rx="17" fill="#0D1117"/>
-  <line x1="1" y1="43" x2="{W-1}" y2="43" stroke="#21262D" stroke-width="1"/>
-  <circle cx="24" cy="22" r="5" fill="#FF5F56"/>
-  <circle cx="40" cy="22" r="5" fill="#FFBD2E"/>
-  <circle cx="56" cy="22" r="5" fill="#27C93F"/>
-  <text x="78" y="26" fill="#8B949E" font-family="monospace" font-size="12">zaid@github:~$ ./system --profile --specs</text>
-  <text x="{W-26}" y="26" text-anchor="end" fill="#39D353" font-family="monospace" font-size="11">● ONLINE [DEV-OS]</text>
-  
-  <!-- Terminal Content Header -->
-  <text x="36" y="80" fill="#FF8C00" font-family="monospace" font-size="22" font-weight="700">{esc(p.get("username", "ZAID7829").upper())}</text>
-  <text x="36" y="104" fill="#8B949E" font-family="monospace" font-size="12">{esc(p.get("tagline", "Building complete software from interface to deployment."))}</text>
-  <line x1="36" y1="122" x2="{W-36}" y2="122" stroke="#21262D" stroke-width="1"/>''')
-
-    # Rows layout
-    start_y = 158
-    row_gap = 39
-    for i, (k, v, val_color) in enumerate(rows):
-        y = start_y + i * row_gap
-        delay = 0.15 + i * 0.07
-        
-        # Row content
-        label_svg = f'<text x="36" y="{y}" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">{esc(k.ljust(9))}</text>'
-        div_svg = f'<text x="122" y="{y}" fill="#30363D" font-family="monospace" font-size="11">│</text>'
-        val_svg = f'<text x="140" y="{y}" fill="{val_color}" font-family="monospace" font-size="11">{esc(v)}</text>'
-        
-        if static:
-            parts.append(f'  <g>{label_svg}{div_svg}{val_svg}</g>')
-        else:
-            parts.append(f'''  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="{delay:.2f}s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="{delay:.2f}s" fill="freeze"/>
-    {label_svg}
-    {div_svg}
-    {val_svg}
-  </g>''')
-
-    # Card footer
-    footer_y = H - 52
-    parts.append(f'''  <!-- Terminal Footer Specs -->
-  <line x1="36" y1="{footer_y}" x2="{W-36}" y2="{footer_y}" stroke="#21262D" stroke-width="1"/>
-  <circle cx="44" cy="{footer_y+26}" r="4" fill="#FF8C00"/>
-  <text x="56" y="{footer_y+29}" fill="#8B949E" font-family="monospace" font-size="11">PHILOSOPHY: Clean Architecture · Performance · Security · DX</text>
-  <text x="{W-36}" y="{footer_y+29}" text-anchor="end" fill="#6E7681" font-family="monospace" font-size="11">UPTIME: CONTINUOUS // 2026</text>''')
-
-    svg = f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Terminal developer information card for Zaid7829">
-  <title>Zaid7829 — Developer System Card</title>
-  <desc>Neofetch developer information card detailing full stack role, skills, and status</desc>
-{chr(10).join(parts)}
-</svg>
-'''
-    OUTPUT_PATH.write_text(svg, encoding="utf-8")
-    print(f"Wrote {OUTPUT_PATH}")
+    # Outer Terminal Frame
+    lines.append(f'  <rect width="{W}" height="{H}" rx="14" fill="url(#card-bg)"/>')
+    lines.append(f'  <rect x="1" y="1" width="{W-2}" height="{H-2}" rx="13" fill="none" stroke="#30363D" stroke-width="1.2"/>')
+    
+    # Terminal Title Bar
+    lines.append(f'  <rect x="1" y="1" width="{W-2}" height="38" rx="13" fill="#0D1117"/>')
+    lines.append(f'  <line x1="1" y1="39" x2="{W-1}" y2="39" stroke="#21262D" stroke-width="1"/>')
+    lines.append('  <circle cx="20" cy="20" r="5" fill="#FF5F56"/>')
+    lines.append('  <circle cx="36" cy="20" r="5" fill="#FFBD2E"/>')
+    lines.append('  <circle cx="52" cy="20" r="5" fill="#27C93F"/>')
+    lines.append('  <text class="mono" x="74" y="24" fill="#8B949E" font-size="12">zaid@github:~$ whoami</text>')
+    lines.append(f'  <text class="mono" x="{W-24}" y="24" text-anchor="end" fill="#39D353" font-size="11">● ACTIVE // BUILDER</text>')
+    
+    # Header: Name & Core Identity
+    lines.append('  <!-- Header: Identity -->')
+    lines.append('  <text class="mono" x="32" y="68" fill="#FF8C00" font-size="18" font-weight="700">ZAID</text>')
+    lines.append('  <text class="mono" x="88" y="68" fill="#30363D" font-size="14">│</text>')
+    lines.append('  <text class="mono" x="104" y="67" fill="#58A6FF" font-size="11.5" font-weight="600" letter-spacing="0.08em">AI ENGINEER  ·  FULL STACK DEVELOPER  ·  SOFTWARE ENGINEER</text>')
+    lines.append(f'  <line x1="32" y1="80" x2="{W-32}" y2="80" stroke="#21262D" stroke-width="1"/>')
+    
+    # Natural Developer Statement (3 clean lines)
+    lines.append('  <!-- Bio Statement -->')
+    lines.append('  <text class="mono" x="32" y="106" fill="#C9D1D9" font-size="12.5">')
+    lines.append('    <tspan fill="#E6EDF3" font-weight="600">I’m Zaid</tspan> — an engineer who genuinely enjoys <tspan fill="#F0F6FC">building things</tspan> and solving complex problems.')
+    lines.append('  </text>')
+    lines.append('  <text class="mono" x="32" y="128" fill="#C9D1D9" font-size="12.5">')
+    lines.append('    I like taking an idea, figuring out how it should work, and turning it into software that actually works.')
+    lines.append('  </text>')
+    lines.append('  <text class="mono" x="32" y="150" fill="#8B949E" font-size="12">')
+    lines.append('    Most learning happens by building, breaking, debugging, and following useful rabbit holes.')
+    lines.append('  </text>')
+    
+    # Divider line
+    lines.append(f'  <line x1="32" y1="168" x2="{W-32}" y2="168" stroke="#1F242C" stroke-width="1"/>')
+    
+    # Currently Building Row
+    lines.append('  <!-- Currently Building -->')
+    lines.append('  <text class="mono" x="32" y="196" fill="#8B949E" font-size="11" font-weight="700">CURRENTLY BUILDING</text>')
+    
+    # Project 1: Aura
+    lines.append('  <a class="term-link" href="https://github.com/Zaid7829/Aura" target="_blank" rel="noopener noreferrer">')
+    lines.append('    <rect class="card-btn" x="194" y="179" width="138" height="28" rx="6"/>')
+    # Octocat / diamond icon
+    lines.append('    <circle cx="210" cy="193" r="4.5" fill="#58A6FF"/>')
+    lines.append('    <text class="mono btn-text" x="222" y="197" fill="#E6EDF3" font-size="11.5" font-weight="600">Aura</text>')
+    lines.append('    <text class="mono" x="316" y="197" fill="#8B949E" font-size="11">↗</text>')
+    lines.append('  </a>')
+    
+    # Project 2: AgentFlow
+    lines.append('  <a class="term-link" href="https://github.com/Zaid7829/AgentFlow" target="_blank" rel="noopener noreferrer">')
+    lines.append('    <rect class="card-btn" x="344" y="179" width="168" height="28" rx="6"/>')
+    lines.append('    <circle cx="360" cy="193" r="4.5" fill="#39D353"/>')
+    lines.append('    <text class="mono btn-text" x="372" y="197" fill="#E6EDF3" font-size="11.5" font-weight="600">AgentFlow</text>')
+    lines.append('    <text class="mono" x="496" y="197" fill="#8B949E" font-size="11">↗</text>')
+    lines.append('  </a>')
+    
+    # Developer Workflow Pipeline
+    lines.append('  <!-- Developer Workflow Pipeline -->')
+    lines.append(f'  <rect x="32" y="224" width="{W-64}" height="48" rx="8" fill="#0D1117" stroke="#21262D" stroke-width="1"/>')
+    
+    lines.append('  <text class="mono" x="48" y="253" font-size="11.5">')
+    lines.append('    <tspan fill="#8B949E" font-weight="700">WORKFLOW: </tspan>')
+    lines.append('    <tspan fill="#58A6FF" font-weight="600">CODE</tspan>')
+    lines.append('    <tspan fill="#484F58"> → </tspan>')
+    lines.append('    <tspan fill="#A371F7" font-weight="600">EXPERIMENT</tspan>')
+    lines.append('    <tspan fill="#484F58"> → </tspan>')
+    lines.append('    <tspan fill="#F85149" font-weight="600">BREAK</tspan>')
+    lines.append('    <tspan fill="#484F58"> → </tspan>')
+    lines.append('    <tspan fill="#FF8C00" font-weight="600">DEBUG</tspan>')
+    lines.append('    <tspan fill="#484F58"> → </tspan>')
+    lines.append('    <tspan fill="#39D353" font-weight="600">BUILD AGAIN</tspan>')
+    lines.append('    <tspan class="cursor" fill="#39D353">_</tspan>')
+    lines.append('  </text>')
+    
+    lines.append('</svg>')
+    
+    content = "\n".join(lines)
+    OUTPUT_PATH.write_text(content, encoding="utf-8")
+    print(f"Generated {OUTPUT_PATH} ({len(content)} bytes)")
 
 if __name__ == "__main__":
-    main()
+    generate_card()

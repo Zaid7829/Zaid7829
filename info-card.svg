@@ -1,126 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="760" height="760" viewBox="0 0 760 760" role="img" aria-label="Terminal developer information card for Zaid7829">
-  <title>Zaid7829 — Developer System Card</title>
-  <desc>Neofetch developer information card detailing full stack role, skills, and status</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 304" width="760" height="304" role="img" aria-label="Zaid — Identity Card">
+  <title>Zaid — Identity Card</title>
+  <desc>AI Engineer, Full Stack Developer, and Builder — Personal identity and current builds</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace; }
+    .term-link {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .term-link .card-btn {
+      fill: #161B22;
+      stroke: #30363D;
+      stroke-width: 1px;
+      transition: fill 0.2s ease, stroke 0.2s ease;
+    }
+    .term-link:hover .card-btn {
+      fill: #21262D;
+      stroke: #58A6FF;
+    }
+    .term-link:hover .btn-text {
+      fill: #58A6FF;
+    }
+    .cursor {
+      animation: termBlink 0.8s step-end infinite;
+    }
+    @keyframes termBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+  </style>
   <defs>
-    <radialGradient id="card-bg" cx="50%" cy="40%" r="75%">
-      <stop offset="0%" stop-color="#11151c"/>
-      <stop offset="55%" stop-color="#0a0d12"/>
-      <stop offset="100%" stop-color="#050608"/>
+    <radialGradient id="card-bg" cx="50%" cy="30%" r="80%">
+      <stop offset="0%" stop-color="#111620"/>
+      <stop offset="60%" stop-color="#0A0E14"/>
+      <stop offset="100%" stop-color="#06080B"/>
     </radialGradient>
   </defs>
-  
-  <!-- Terminal Outer Frame -->
-  <rect width="760" height="760" rx="18" fill="url(#card-bg)"/>
-  <rect x="1" y="1" width="758" height="758" rx="17" fill="none" stroke="#30363D" stroke-width="1.2"/>
-  
-  <!-- Top Terminal Bar -->
-  <rect x="1" y="1" width="758" height="42" rx="17" fill="#0D1117"/>
-  <line x1="1" y1="43" x2="759" y2="43" stroke="#21262D" stroke-width="1"/>
-  <circle cx="24" cy="22" r="5" fill="#FF5F56"/>
-  <circle cx="40" cy="22" r="5" fill="#FFBD2E"/>
-  <circle cx="56" cy="22" r="5" fill="#27C93F"/>
-  <text x="78" y="26" fill="#8B949E" font-family="monospace" font-size="12">zaid@github:~$ ./system --profile --specs</text>
-  <text x="734" y="26" text-anchor="end" fill="#39D353" font-family="monospace" font-size="11">● ONLINE [DEV-OS]</text>
-  
-  <!-- Terminal Content Header -->
-  <text x="36" y="80" fill="#FF8C00" font-family="monospace" font-size="22" font-weight="700">ZAID7829</text>
-  <text x="36" y="104" fill="#8B949E" font-family="monospace" font-size="12">Building complete software from interface to deployment.</text>
-  <line x1="36" y1="122" x2="724" y2="122" stroke="#21262D" stroke-width="1"/>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.15s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.15s" fill="freeze"/>
-    <text x="36" y="158" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">USER     </text>
-    <text x="122" y="158" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="158" fill="#E6EDF3" font-family="monospace" font-size="11">Zaid7829</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.22s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.22s" fill="freeze"/>
-    <text x="36" y="197" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">ROLE     </text>
-    <text x="122" y="197" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="197" fill="#FF8C00" font-family="monospace" font-size="11">Full Stack Developer</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.29s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.29s" fill="freeze"/>
-    <text x="36" y="236" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">FOCUS    </text>
-    <text x="122" y="236" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="236" fill="#E6EDF3" font-family="monospace" font-size="11">Full-Stack Web · API Design · Architecture</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.36s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.36s" fill="freeze"/>
-    <text x="36" y="275" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">LANGS    </text>
-    <text x="122" y="275" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="275" fill="#C9D1D9" font-family="monospace" font-size="11">JavaScript · TypeScript · Python · Java · C · C++</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.43s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.43s" fill="freeze"/>
-    <text x="36" y="314" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">FRONTEND </text>
-    <text x="122" y="314" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="314" fill="#C9D1D9" font-family="monospace" font-size="11">React · Next.js · Vue · Angular · Svelte</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.50s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.50s" fill="freeze"/>
-    <text x="36" y="353" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">BACKEND  </text>
-    <text x="122" y="353" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="353" fill="#C9D1D9" font-family="monospace" font-size="11">Node.js · Express · NestJS · FastAPI · Django</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.57s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.57s" fill="freeze"/>
-    <text x="36" y="392" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">APIS     </text>
-    <text x="122" y="392" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="392" fill="#C9D1D9" font-family="monospace" font-size="11">REST · GraphQL · WebSockets · Auth / JWT</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.64s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.64s" fill="freeze"/>
-    <text x="36" y="431" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">DATABASE </text>
-    <text x="122" y="431" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="431" fill="#C9D1D9" font-family="monospace" font-size="11">PostgreSQL · MySQL · MongoDB · Redis · SQLite</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.71s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.71s" fill="freeze"/>
-    <text x="36" y="470" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">CLOUD/OPS</text>
-    <text x="122" y="470" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="470" fill="#C9D1D9" font-family="monospace" font-size="11">AWS · Azure · Google Cloud · Docker · Kubernetes</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.78s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.78s" fill="freeze"/>
-    <text x="36" y="509" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">TESTING  </text>
-    <text x="122" y="509" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="509" fill="#C9D1D9" font-family="monospace" font-size="11">Jest · Vitest · Pytest · Playwright · Cypress</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.85s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.85s" fill="freeze"/>
-    <text x="36" y="548" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">AI / ML  </text>
-    <text x="122" y="548" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="548" fill="#C9D1D9" font-family="monospace" font-size="11">OpenAI · LLM Applications · LangChain · Hugging Face</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.92s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.92s" fill="freeze"/>
-    <text x="36" y="587" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">KERNEL   </text>
-    <text x="122" y="587" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="587" fill="#8B949E" font-family="monospace" font-size="11">x86_64 Full Stack Dev OS // kernel 6.x</text>
-  </g>
-  <g opacity="0">
-    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.99s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.99s" fill="freeze"/>
-    <text x="36" y="626" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">STATUS   </text>
-    <text x="122" y="626" fill="#30363D" font-family="monospace" font-size="11">│</text>
-    <text x="140" y="626" fill="#39D353" font-family="monospace" font-size="11">BUILDING · LEARNING · SHIPPING</text>
-  </g>
-  <!-- Terminal Footer Specs -->
-  <line x1="36" y1="708" x2="724" y2="708" stroke="#21262D" stroke-width="1"/>
-  <circle cx="44" cy="734" r="4" fill="#FF8C00"/>
-  <text x="56" y="737" fill="#8B949E" font-family="monospace" font-size="11">PHILOSOPHY: Clean Architecture · Performance · Security · DX</text>
-  <text x="724" y="737" text-anchor="end" fill="#6E7681" font-family="monospace" font-size="11">UPTIME: CONTINUOUS // 2026</text>
+  <rect width="760" height="304" rx="14" fill="url(#card-bg)"/>
+  <rect x="1" y="1" width="758" height="302" rx="13" fill="none" stroke="#30363D" stroke-width="1.2"/>
+  <rect x="1" y="1" width="758" height="38" rx="13" fill="#0D1117"/>
+  <line x1="1" y1="39" x2="759" y2="39" stroke="#21262D" stroke-width="1"/>
+  <circle cx="20" cy="20" r="5" fill="#FF5F56"/>
+  <circle cx="36" cy="20" r="5" fill="#FFBD2E"/>
+  <circle cx="52" cy="20" r="5" fill="#27C93F"/>
+  <text class="mono" x="74" y="24" fill="#8B949E" font-size="12">zaid@github:~$ whoami</text>
+  <text class="mono" x="736" y="24" text-anchor="end" fill="#39D353" font-size="11">● ACTIVE // BUILDER</text>
+  <!-- Header: Identity -->
+  <text class="mono" x="32" y="68" fill="#FF8C00" font-size="18" font-weight="700">ZAID</text>
+  <text class="mono" x="88" y="68" fill="#30363D" font-size="14">│</text>
+  <text class="mono" x="104" y="67" fill="#58A6FF" font-size="11.5" font-weight="600" letter-spacing="0.08em">AI ENGINEER  ·  FULL STACK DEVELOPER  ·  SOFTWARE ENGINEER</text>
+  <line x1="32" y1="80" x2="728" y2="80" stroke="#21262D" stroke-width="1"/>
+  <!-- Bio Statement -->
+  <text class="mono" x="32" y="106" fill="#C9D1D9" font-size="12.5">
+    <tspan fill="#E6EDF3" font-weight="600">I’m Zaid</tspan> — an engineer who genuinely enjoys <tspan fill="#F0F6FC">building things</tspan> and solving complex problems.
+  </text>
+  <text class="mono" x="32" y="128" fill="#C9D1D9" font-size="12.5">
+    I like taking an idea, figuring out how it should work, and turning it into software that actually works.
+  </text>
+  <text class="mono" x="32" y="150" fill="#8B949E" font-size="12">
+    Most learning happens by building, breaking, debugging, and following useful rabbit holes.
+  </text>
+  <line x1="32" y1="168" x2="728" y2="168" stroke="#1F242C" stroke-width="1"/>
+  <!-- Currently Building -->
+  <text class="mono" x="32" y="196" fill="#8B949E" font-size="11" font-weight="700">CURRENTLY BUILDING</text>
+  <a class="term-link" href="https://github.com/Zaid7829/Aura" target="_blank" rel="noopener noreferrer">
+    <rect class="card-btn" x="194" y="179" width="138" height="28" rx="6"/>
+    <circle cx="210" cy="193" r="4.5" fill="#58A6FF"/>
+    <text class="mono btn-text" x="222" y="197" fill="#E6EDF3" font-size="11.5" font-weight="600">Aura</text>
+    <text class="mono" x="316" y="197" fill="#8B949E" font-size="11">↗</text>
+  </a>
+  <a class="term-link" href="https://github.com/Zaid7829/AgentFlow" target="_blank" rel="noopener noreferrer">
+    <rect class="card-btn" x="344" y="179" width="168" height="28" rx="6"/>
+    <circle cx="360" cy="193" r="4.5" fill="#39D353"/>
+    <text class="mono btn-text" x="372" y="197" fill="#E6EDF3" font-size="11.5" font-weight="600">AgentFlow</text>
+    <text class="mono" x="496" y="197" fill="#8B949E" font-size="11">↗</text>
+  </a>
+  <!-- Developer Workflow Pipeline -->
+  <rect x="32" y="224" width="696" height="48" rx="8" fill="#0D1117" stroke="#21262D" stroke-width="1"/>
+  <text class="mono" x="48" y="253" font-size="11.5">
+    <tspan fill="#8B949E" font-weight="700">WORKFLOW: </tspan>
+    <tspan fill="#58A6FF" font-weight="600">CODE</tspan>
+    <tspan fill="#484F58"> → </tspan>
+    <tspan fill="#A371F7" font-weight="600">EXPERIMENT</tspan>
+    <tspan fill="#484F58"> → </tspan>
+    <tspan fill="#F85149" font-weight="600">BREAK</tspan>
+    <tspan fill="#484F58"> → </tspan>
+    <tspan fill="#FF8C00" font-weight="600">DEBUG</tspan>
+    <tspan fill="#484F58"> → </tspan>
+    <tspan fill="#39D353" font-weight="600">BUILD AGAIN</tspan>
+    <tspan class="cursor" fill="#39D353">_</tspan>
+  </text>
 </svg>
