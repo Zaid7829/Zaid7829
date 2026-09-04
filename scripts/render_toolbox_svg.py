@@ -1,18 +1,17 @@
 #!/usr/bin/env python3
 """
-Generate a self-contained, unified visual developer toolbox SVG with real official SVG logos.
-Features:
-- Visual-first logos (32x32px) as primary elements
-- 6 standard categories: LANGUAGES, FRONTEND, BACKEND & APIS, DATABASES, DEVOPS & CLOUD, TESTING & QA
-- Zero emojis, real SVG vector paths
-- Dark terminal aesthetic with window chrome and monospace headings
-- Interactive CSS hover: scale 1.08, brand drop-shadow glow, logo brightening, custom tooltips
-- Accessible roles, labels, and titles
-Output: toolbox.svg (940x670)
+Generate a self-contained visual developer toolbox SVG.
+Specifications:
+- Visual-only: NO technology text names visible normally
+- Real official SVG logos (48x48px) inside dark grey square containers (76x76px)
+- Container background: #252B33, border: #343B45, border-radius: 10px
+- Generous spacing: 24px gap between containers
+- Category headings: clean, technical, small (e.g. [01] LANGUAGES)
+- Interactive hover: subtle border highlight and minimal tooltip with tech name
+- Output: toolbox.svg (940x890)
 """
 from __future__ import annotations
 import html
-import json
 import re
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -25,98 +24,92 @@ CATEGORIES = [
         "id": "01",
         "name": "LANGUAGES",
         "color": "#FF8C00",
-        "tag": "CORE_SYNTAX",
         "items": [
-            {"name": "TypeScript", "key": "typescript", "label": "TypeScript"},
-            {"name": "JavaScript", "key": "javascript", "label": "JavaScript"},
-            {"name": "Python", "key": "python", "label": "Python"},
-            {"name": "Go", "key": "go", "label": "Go"},
-            {"name": "Rust", "key": "rust", "label": "Rust"},
-            {"name": "Java", "key": "java", "label": "Java"},
-            {"name": "C++", "key": "cplusplus", "label": "C++"},
-            {"name": "SQL", "key": "sql", "label": "SQL"},
-            {"name": "Bash", "key": "bash", "label": "Bash"}
+            {"name": "TypeScript", "key": "typescript"},
+            {"name": "JavaScript", "key": "javascript"},
+            {"name": "Python", "key": "python"},
+            {"name": "Go", "key": "go"},
+            {"name": "Rust", "key": "rust"},
+            {"name": "Java", "key": "java"},
+            {"name": "C++", "key": "cplusplus"},
+            {"name": "SQL", "key": "sql"},
+            {"name": "Bash", "key": "bash"}
         ]
     },
     {
         "id": "02",
         "name": "FRONTEND",
         "color": "#38BDF8",
-        "tag": "CLIENT_ENGINEERING",
         "items": [
-            {"name": "React", "key": "react", "label": "React"},
-            {"name": "Next.js", "key": "nextjs", "label": "Next.js"},
-            {"name": "Tailwind CSS", "key": "tailwindcss", "label": "Tailwind"},
-            {"name": "Vue", "key": "vue", "label": "Vue"},
-            {"name": "Angular", "key": "angular", "label": "Angular"},
-            {"name": "Svelte", "key": "svelte", "label": "Svelte"},
-            {"name": "Vite", "key": "vite", "label": "Vite"},
-            {"name": "HTML5", "key": "html5", "label": "HTML5"},
-            {"name": "CSS3", "key": "css3", "label": "CSS3"}
+            {"name": "React", "key": "react"},
+            {"name": "Next.js", "key": "nextjs"},
+            {"name": "Tailwind CSS", "key": "tailwindcss"},
+            {"name": "Vue", "key": "vue"},
+            {"name": "Angular", "key": "angular"},
+            {"name": "Svelte", "key": "svelte"},
+            {"name": "Vite", "key": "vite"},
+            {"name": "HTML5", "key": "html5"},
+            {"name": "CSS3", "key": "css3"}
         ]
     },
     {
         "id": "03",
         "name": "BACKEND & APIS",
         "color": "#58A6FF",
-        "tag": "SERVICES_ROUTING",
         "items": [
-            {"name": "Node.js", "key": "nodejs", "label": "Node.js"},
-            {"name": "FastAPI", "key": "fastapi", "label": "FastAPI"},
-            {"name": "Express", "key": "express", "label": "Express"},
-            {"name": "NestJS", "key": "nestjs", "label": "NestJS"},
-            {"name": "Django", "key": "django", "label": "Django"},
-            {"name": "Flask", "key": "flask", "label": "Flask"},
-            {"name": "REST", "key": "rest", "label": "REST API"},
-            {"name": "GraphQL", "key": "graphql", "label": "GraphQL"}
+            {"name": "Node.js", "key": "nodejs"},
+            {"name": "FastAPI", "key": "fastapi"},
+            {"name": "Express", "key": "express"},
+            {"name": "NestJS", "key": "nestjs"},
+            {"name": "Django", "key": "django"},
+            {"name": "Flask", "key": "flask"},
+            {"name": "REST", "key": "rest"},
+            {"name": "GraphQL", "key": "graphql"}
         ]
     },
     {
         "id": "04",
         "name": "DATABASES",
         "color": "#3FB950",
-        "tag": "PERSISTENCE_CACHE",
         "items": [
-            {"name": "PostgreSQL", "key": "postgresql", "label": "PostgreSQL"},
-            {"name": "MongoDB", "key": "mongodb", "label": "MongoDB"},
-            {"name": "Redis", "key": "redis", "label": "Redis"},
-            {"name": "MySQL", "key": "mysql", "label": "MySQL"},
-            {"name": "SQLite", "key": "sqlite", "label": "SQLite"},
-            {"name": "Prisma ORM", "key": "prisma", "label": "Prisma"},
-            {"name": "SQLAlchemy", "key": "sqlalchemy", "label": "SQLAlchemy"}
+            {"name": "PostgreSQL", "key": "postgresql"},
+            {"name": "MongoDB", "key": "mongodb"},
+            {"name": "Redis", "key": "redis"},
+            {"name": "MySQL", "key": "mysql"},
+            {"name": "SQLite", "key": "sqlite"},
+            {"name": "Prisma ORM", "key": "prisma"},
+            {"name": "SQLAlchemy", "key": "sqlalchemy"}
         ]
     },
     {
         "id": "05",
         "name": "DEVOPS & CLOUD",
         "color": "#A371F7",
-        "tag": "INFRA_PIPELINE",
         "items": [
-            {"name": "Docker", "key": "docker", "label": "Docker"},
-            {"name": "Kubernetes", "key": "kubernetes", "label": "Kubernetes"},
-            {"name": "GitHub Actions", "key": "githubactions", "label": "GH Actions"},
-            {"name": "AWS", "key": "aws", "label": "AWS"},
-            {"name": "Azure", "key": "azure", "label": "Azure"},
-            {"name": "Linux", "key": "linux", "label": "Linux"}
+            {"name": "Docker", "key": "docker"},
+            {"name": "Kubernetes", "key": "kubernetes"},
+            {"name": "GitHub Actions", "key": "githubactions"},
+            {"name": "AWS", "key": "aws"},
+            {"name": "Azure", "key": "azure"},
+            {"name": "Linux", "key": "linux"}
         ]
     },
     {
         "id": "06",
         "name": "TESTING & QA",
         "color": "#F85149",
-        "tag": "VERIFICATION_SUITE",
         "items": [
-            {"name": "Jest", "key": "jest", "label": "Jest"},
-            {"name": "Vitest", "key": "vitest", "label": "Vitest"},
-            {"name": "Pytest", "key": "pytest", "label": "Pytest"},
-            {"name": "Playwright", "key": "playwright", "label": "Playwright"},
-            {"name": "Cypress", "key": "cypress", "label": "Cypress"},
-            {"name": "Testing Library", "key": "testinglibrary", "label": "Test Library"}
+            {"name": "Jest", "key": "jest"},
+            {"name": "Vitest", "key": "vitest"},
+            {"name": "Pytest", "key": "pytest"},
+            {"name": "Playwright", "key": "playwright"},
+            {"name": "Cypress", "key": "cypress"},
+            {"name": "Testing Library", "key": "testinglibrary"}
         ]
     }
 ]
 
-W, H = 940, 670
+W, H = 940, 890
 
 def strip_ns(elem):
     if '}' in elem.tag:
@@ -129,13 +122,8 @@ def strip_ns(elem):
         strip_ns(child)
 
 def sanitize_icon_xml(svg_path: Path, tech_key: str):
-    """
-    Reads an icon SVG, prefixes all internal IDs to avoid collisions,
-    and returns viewBox and inner XML elements string.
-    """
     content = svg_path.read_text(encoding='utf-8')
     
-    # Find all id="..." and prefix them
     ids = re.findall(r'id=["\']([^"\']+)["\']', content)
     for id_val in set(ids):
         prefixed = f"{tech_key}_{id_val}"
@@ -161,56 +149,44 @@ def sanitize_icon_xml(svg_path: Path, tech_key: str):
 def render_toolbox():
     lines = []
     lines.append('<?xml version="1.0" encoding="UTF-8"?>')
-    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Zaid7829 developer toolbox and visual technology index">')
-    lines.append('  <title>Zaid7829 — Developer Toolbox</title>')
-    lines.append('  <desc>Visual technology index featuring official logos across languages, frameworks, cloud, databases, and testing</desc>')
+    lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Zaid developer toolbox and visual technology matrix">')
+    lines.append('  <title>Zaid — Developer Toolbox</title>')
+    lines.append('  <desc>Visual technology grid featuring official logos inside grey containers without text labels</desc>')
     
     # CSS Styles for interactions
     lines.append('  <style>')
-    lines.append('    .tech-card {')
+    lines.append('    .icon-container {')
     lines.append('      cursor: pointer;')
     lines.append('      transform-origin: center;')
-    lines.append('      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);')
+    lines.append('      transition: transform 0.15s ease;')
     lines.append('    }')
-    lines.append('    .tech-card .card-bg {')
-    lines.append('      fill: #0D1117;')
-    lines.append('      stroke: #21262D;')
-    lines.append('      stroke-width: 1px;')
-    lines.append('      transition: all 0.2s ease;')
+    lines.append('    .icon-container .box-bg {')
+    lines.append('      fill: #252B33;')
+    lines.append('      stroke: #343B45;')
+    lines.append('      stroke-width: 1.2px;')
+    lines.append('      transition: fill 0.15s ease, stroke 0.15s ease;')
     lines.append('    }')
-    lines.append('    .tech-card .logo-box {')
-    lines.append('      opacity: 0.88;')
-    lines.append('      transition: all 0.2s ease;')
+    lines.append('    .icon-container .logo-svg {')
+    lines.append('      transition: transform 0.15s ease;')
     lines.append('    }')
-    lines.append('    .tech-card .card-label {')
-    lines.append('      fill: #8B949E;')
-    lines.append('      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;')
-    lines.append('      font-size: 9.5px;')
-    lines.append('      transition: fill 0.2s ease;')
-    lines.append('    }')
-    lines.append('    .tech-card .tooltip {')
+    lines.append('    .icon-container .tooltip {')
     lines.append('      opacity: 0;')
     lines.append('      pointer-events: none;')
-    lines.append('      transform: translateY(4px);')
-    lines.append('      transition: opacity 0.2s ease, transform 0.2s ease;')
+    lines.append('      transform: translateY(3px);')
+    lines.append('      transition: opacity 0.15s ease, transform 0.15s ease;')
     lines.append('    }')
-    lines.append('    .tech-card:hover {')
-    lines.append('      transform: translateY(-2px) scale(1.06);')
+    lines.append('    .icon-container:hover {')
+    lines.append('      transform: translateY(-2px);')
     lines.append('    }')
-    lines.append('    .tech-card:hover .card-bg {')
-    lines.append('      fill: #161B22;')
-    lines.append('      stroke: var(--accent, #58A6FF);')
-    lines.append('      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));')
+    lines.append('    .icon-container:hover .box-bg {')
+    lines.append('      fill: #2D333B;')
+    lines.append('      stroke: #58A6FF;')
     lines.append('    }')
-    lines.append('    .tech-card:hover .logo-box {')
-    lines.append('      opacity: 1;')
-    lines.append('      filter: drop-shadow(0 0 8px var(--glow, rgba(88, 166, 255, 0.4)));')
+    lines.append('    .icon-container:hover .logo-svg {')
+    lines.append('      transform: scale(1.05);')
+    lines.append('      transform-origin: center;')
     lines.append('    }')
-    lines.append('    .tech-card:hover .card-label {')
-    lines.append('      fill: #F0F6FC;')
-    lines.append('      font-weight: 600;')
-    lines.append('    }')
-    lines.append('    .tech-card:hover .tooltip {')
+    lines.append('    .icon-container:hover .tooltip {')
     lines.append('      opacity: 1;')
     lines.append('      transform: translateY(0);')
     lines.append('    }')
@@ -226,96 +202,69 @@ def render_toolbox():
     lines.append('  <circle cx="20" cy="20" r="5" fill="#FF5F56"/>')
     lines.append('  <circle cx="36" cy="20" r="5" fill="#FFBD2E"/>')
     lines.append('  <circle cx="52" cy="20" r="5" fill="#27C93F"/>')
-    lines.append('  <text x="74" y="24" fill="#8B949E" font-family="ui-monospace, monospace" font-size="12">zaid@github:~$ ./toolbox --visual --cluster</text>')
-    lines.append(f'  <text x="{W-24}" y="24" text-anchor="end" fill="#FF8C00" font-family="ui-monospace, monospace" font-size="11" font-weight="600">45 TECHNOLOGIES // VISUAL CLUSTER</text>')
+    lines.append('  <text x="74" y="24" fill="#8B949E" font-family="ui-monospace, monospace" font-size="12">zaid@github:~$ ./toolbox --grid --logos-only</text>')
+    lines.append(f'  <text x="{W-24}" y="24" text-anchor="end" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11" font-weight="600">ACTIVE_STACK // 44 TECHNOLOGIES</text>')
     
-    # Section Subheader
-    lines.append('  <text x="28" y="66" fill="#FF8C00" font-family="ui-monospace, monospace" font-size="13" font-weight="700">~/ 03. toolbox</text>')
-    lines.append('  <text x="140" y="66" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11">Production technology stack and verified engineering capabilities</text>')
-    lines.append(f'  <line x1="28" y1="76" x2="{W-28}" y2="76" stroke="#21262D" stroke-width="1"/>')
+    # Section Title & Subheader
+    lines.append('  <text x="32" y="66" fill="#FF8C00" font-family="ui-monospace, monospace" font-size="13" font-weight="700">~/ 03. toolbox</text>')
+    lines.append('  <text x="144" y="66" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11">Production technology stack and verified engineering capabilities</text>')
+    lines.append(f'  <line x1="32" y1="76" x2="{W-32}" y2="76" stroke="#21262D" stroke-width="1"/>')
     
-    start_y = 90
-    lane_height = 84
-    lane_gap = 10
+    # Grid Specifications
+    box_size = 76
+    logo_size = 48
+    gap = 24
+    start_x = 32
+    start_y = 104
+    row_pitch = 126  # distance between category tops
     
-    # Layout 6 categories as horizontal architectural clusters
     for cat_idx, cat in enumerate(CATEGORIES):
-        cy = start_y + cat_idx * (lane_height + lane_gap)
-        color = cat["color"]
+        cat_y = start_y + cat_idx * row_pitch
         cat_name = cat["name"]
-        item_count = len(cat["items"])
+        color = cat["color"]
         
-        # Lane container
-        lines.append(f'  <!-- Lane: {cat_name} -->')
-        lines.append(f'  <g id="lane-{cat["id"]}">')
-        lines.append(f'    <rect x="28" y="{cy}" width="{W-56}" height="{lane_height}" rx="8" fill="#090D13" stroke="#1F242C" stroke-width="1"/>')
+        lines.append(f'  <!-- Category: {cat_name} -->')
+        lines.append(f'  <g id="cat-{cat["id"]}">' )
         
-        # Category Accent Left Bar
-        lines.append(f'    <rect x="28" y="{cy}" width="4" height="{lane_height}" rx="2" fill="{color}"/>')
+        # Category Heading: Small & Technical
+        lines.append(f'    <text x="{start_x}" y="{cat_y + 14}" fill="{color}" font-family="ui-monospace, monospace" font-size="11" font-weight="700">[{cat["id"]}] {html.escape(cat_name)}</text>')
+        lines.append(f'    <line x1="{start_x + 190}" y1="{cat_y + 10}" x2="{W - 32}" y2="{cat_y + 10}" stroke="#1F242C" stroke-width="1"/>')
         
-        # Category Monospace Header Info
-        lines.append(f'    <text x="44" y="{cy+24}" fill="{color}" font-family="ui-monospace, monospace" font-size="11" font-weight="700">[{cat["id"]}] {html.escape(cat_name)}</text>')
-        lines.append(f'    <text x="44" y="{cy+42}" fill="#6E7681" font-family="ui-monospace, monospace" font-size="9" font-weight="500">{cat["tag"]}</text>')
-        lines.append(f'    <text x="44" y="{cy+60}" fill="#484F58" font-family="ui-monospace, monospace" font-size="9">{item_count} ITEMS</text>')
-        lines.append(f'    <line x1="172" y1="{cy+10}" x2="172" y2="{cy+lane_height-10}" stroke="#1F242C" stroke-width="1"/>')
-        
-        # Items Area (x = 186 to W-38 = 902, total available = 716px)
-        items_area_x = 186
-        available_w = W - 38 - items_area_x
-        
-        # Compute item box sizing
-        # For 9 items: 72px card width, ~8px gap
-        card_w = 70
-        card_h = 66
-        
-        # Space items evenly
-        if item_count > 1:
-            total_cards_w = item_count * card_w
-            gap = (available_w - total_cards_w) / (item_count - 1)
-            # cap gap between 8 and 28
-            gap = max(8, min(24, gap))
-        else:
-            gap = 12
-            
-        for idx, item in enumerate(cat["items"]):
-            ix = items_area_x + idx * (card_w + gap)
-            iy = cy + (lane_height - card_h) / 2
+        # Grid of Large Logo Containers
+        grid_y = cat_y + 26
+        for item_idx, item in enumerate(cat["items"]):
+            ix = start_x + item_idx * (box_size + gap)
+            iy = grid_y
             
             svg_file = ICONS_DIR / f"{item['key']}.svg"
             if not svg_file.exists():
-                print(f"Warning: icon file not found: {svg_file}")
+                print(f"Warning: Missing icon {svg_file}")
                 continue
                 
             viewBox, inner_xml = sanitize_icon_xml(svg_file, f"{cat['id']}_{item['key']}")
             
-            # Interactive Tech Card
-            lines.append(f'    <g class="tech-card" style="--accent: {color}; --glow: {color}66;" role="img" aria-label="{html.escape(item["name"])} - {html.escape(cat_name)}">')
-            lines.append(f'      <title>{html.escape(item["name"])} · {html.escape(cat_name)}</title>')
+            # Icon Container Group
+            lines.append(f'    <g class="icon-container" role="img" aria-label="{html.escape(item["name"])}">')
+            lines.append(f'      <title>{html.escape(item["name"])}</title>')
             
-            # Card Background
-            lines.append(f'      <rect class="card-bg" x="{ix:.1f}" y="{iy:.1f}" width="{card_w}" height="{card_h}" rx="6"/>')
+            # Grey Square Container (#252B33, subtle #343B45 border, rx=10)
+            lines.append(f'      <rect class="box-bg" x="{ix}" y="{iy}" width="{box_size}" height="{box_size}" rx="10"/>')
             
-            # Nested SVG Logo (30x30 centered horizontally in card)
-            logo_size = 30
-            logo_x = ix + (card_w - logo_size) / 2
-            logo_y = iy + 7
-            lines.append(f'      <svg class="logo-box" x="{logo_x:.1f}" y="{logo_y:.1f}" width="{logo_size}" height="{logo_size}" viewBox="{viewBox}">')
+            # Centered Large Technology Logo (48x48px)
+            lx = ix + (box_size - logo_size) / 2
+            ly = iy + (box_size - logo_size) / 2
+            lines.append(f'      <svg class="logo-svg" x="{lx:.1f}" y="{ly:.1f}" width="{logo_size}" height="{logo_size}" viewBox="{viewBox}">')
             lines.append(inner_xml)
             lines.append('      </svg>')
             
-            # Label below logo
-            label_y = iy + 53
-            lines.append(f'      <text class="card-label" x="{ix + card_w/2:.1f}" y="{label_y:.1f}" text-anchor="middle">{html.escape(item["label"])}</text>')
-            
-            # Tooltip HUD
-            tip_w = max(80, len(item["name"]) * 8 + 20)
-            tip_h = 28
-            tip_x = ix + (card_w - tip_w) / 2
+            # Minimal Hover Tooltip (Only technology name)
+            tip_w = max(56, len(item["name"]) * 8 + 16)
+            tip_h = 24
+            tip_x = ix + (box_size - tip_w) / 2
             tip_y = iy - tip_h - 6
             lines.append('      <g class="tooltip">')
-            lines.append(f'        <rect x="{tip_x:.1f}" y="{tip_y:.1f}" width="{tip_w}" height="{tip_h}" rx="5" fill="#161B22" stroke="{color}" stroke-width="1.2" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.6))"/>')
-            lines.append(f'        <text x="{tip_x + tip_w/2:.1f}" y="{tip_y + 13:.1f}" text-anchor="middle" fill="#FFFFFF" font-family="ui-monospace, monospace" font-size="9.5" font-weight="700">{html.escape(item["name"])}</text>')
-            lines.append(f'        <text x="{tip_x + tip_w/2:.1f}" y="{tip_y + 23:.1f}" text-anchor="middle" fill="#8B949E" font-family="ui-monospace, monospace" font-size="8">{html.escape(cat_name)}</text>')
+            lines.append(f'        <rect x="{tip_x:.1f}" y="{tip_y:.1f}" width="{tip_w}" height="{tip_h}" rx="4" fill="#161B22" stroke="#484F58" stroke-width="1" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.6))"/>')
+            lines.append(f'        <text x="{tip_x + tip_w/2:.1f}" y="{tip_y + 16:.1f}" text-anchor="middle" fill="#F0F6FC" font-family="ui-monospace, monospace" font-size="10" font-weight="600">{html.escape(item["name"])}</text>')
             lines.append('      </g>')
             
             lines.append('    </g>')
