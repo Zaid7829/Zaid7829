@@ -5,46 +5,32 @@ zaid@github:~$ whoami
 ```
 
 # **`Z A I D`**
-### **Full Stack Developer · Software Engineer · Builder**
+#### **Full Stack Developer · Software Engineer · Builder**
 
-<!-- STATUS PILLS -->
-[![STATUS](https://img.shields.io/badge/STATUS-AVAILABLE-39D353?style=flat-square&logo=statuspage&logoColor=080B10)](#)
-[![PHASE](https://img.shields.io/badge/PHASE-BUILDING-58A6FF?style=flat-square&logo=powershell&logoColor=white)](#)
-[![MODE](https://img.shields.io/badge/MODE-COLLABORATING-FF8C00?style=flat-square&logo=git&logoColor=white)](#)
-[![PULSE](https://img.shields.io/badge/SYS--PULSE-ONLINE%20%E2%97%8F-39D353?style=flat-square)](#)
+<p>
+  <code>[ FRONTEND ]</code> &nbsp;
+  <code>[ BACKEND ]</code> &nbsp;
+  <code>[ DATABASES ]</code> &nbsp;
+  <code>[ CLOUD ]</code> &nbsp;
+  <code>[ AUTOMATION ]</code>
+</p>
 
-<br>
-
-<!-- ACTION BUTTONS -->
-<p align="center">
-  <a href="https://github.com/Zaid7829">
-    <img src="https://img.shields.io/badge/GitHub-%40Zaid7829-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
-  </a>
-  &nbsp;
-  <a href="mailto:mdyusuffaiz517@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact-FF8C00?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
-  </a>
-  &nbsp;
-  <a href="#-08-selected-work">
-    <img src="https://img.shields.io/badge/Projects-Explore-58A6FF?style=for-the-badge&logo=target&logoColor=white" alt="Projects" />
-  </a>
+<p>
+  <a href="https://github.com/Zaid7829"><strong>GitHub</strong></a> &nbsp;·&nbsp;
+  <a href="mailto:mdyusuffaiz517@gmail.com"><strong>Email</strong></a> &nbsp;·&nbsp;
+  <a href="#-08-selected-work"><strong>Selected Work</strong></a>
 </p>
 
 <br>
 
-<!-- HERO CONSTELLATION -->
-<img src="./hero-constellation.svg" width="940" alt="Zaid Developer Technology Constellation" />
-
-<br><br>
-
-<!-- PORTRAIT + SPECS DUAL CONTAINER -->
+<!-- EDITORIAL DUAL DISPLAY: PORTRAIT & SYSTEM SPEC -->
 <table>
   <tr>
     <td width="50%" align="center" valign="top">
-      <img src="./avi-dotmatrix.svg" width="100%" alt="Zaid particle portrait" />
+      <img src="./avi-dotmatrix.svg" width="100%" alt="Zaid portrait" />
     </td>
     <td width="50%" align="center" valign="top">
-      <img src="./info-card.svg" width="100%" alt="Zaid system specification card" />
+      <img src="./info-card.svg" width="100%" alt="Zaid system specification" />
     </td>
   </tr>
 </table>
@@ -55,132 +41,138 @@ zaid@github:~$ whoami
 
 ---
 
-## `~/ 01. whoami`
+### `~/ 01. whoami`
 
 <table>
   <tr>
-    <td width="50%" align="center" valign="middle">
+    <td width="42%" valign="top">
 
 ```text
-┌─────────────────────────────┐
-│            ZAID             │
-│                             │
-│   ◉ FULL STACK              │
-│   ◉ SOFTWARE ENGINEER       │
-│   ◉ BUILDER                 │
-│                             │
-│   CODE → TEST → AUTOMATE    │
-│          → SHIP             │
-└─────────────────────────────┘
+IDENTITY      Zaid
+ROLE          Full Stack Developer
+LOCATION      Global / Remote
+CORE ENGINE   Architecture → Code
+              → Test → Ship
+STATUS        Active // Building
 ```
 
 </td>
-<td width="50%" valign="middle">
+<td width="58%" valign="top">
 
-<div align="center">
-
-[![Frontend](https://img.shields.io/badge/CAPABILITY-FRONTEND%20ENGINEERING-61DAFB?style=for-the-badge&logo=react&logoColor=080B10)](#)
-<br>
-[![Backend](https://img.shields.io/badge/CAPABILITY-BACKEND%20%26%20APIS-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](#)
-<br>
-[![Database](https://img.shields.io/badge/CAPABILITY-DATABASE%20%26%20CACHE-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)](#)
-<br>
-[![Cloud](https://img.shields.io/badge/CAPABILITY-CLOUD%20%26%20DEVOPS-2496ED?style=for-the-badge&logo=docker&logoColor=white)](#)
-<br>
-[![Security](https://img.shields.io/badge/CAPABILITY-DEFENSIVE%20SECURITY-FF5F56?style=for-the-badge&logo=auth0&logoColor=white)](#)
-<br>
-[![Automation](https://img.shields.io/badge/CAPABILITY-WORKFLOW%20AUTOMATION-39D353?style=for-the-badge&logo=githubactions&logoColor=white)](#)
-
-</div>
+```text
+[01] FRONTEND     Reactive, accessible, component-driven UI systems
+[02] BACKEND      High-throughput REST & GraphQL application services
+[03] DATABASES    Relational schemas, ACID transactions & Redis cache
+[04] CLOUD        Containerized Docker deployments & automated CI/CD
+[05] SECURITY     Defensive validation, zero-leak secrets & JWT auth
+[06] AUTOMATION   Task scripts, git hooks & developer tooling
+```
 
 </td>
 </tr>
 </table>
 
-> 💬 *"Don't just make it work. Make it understandable, maintainable, and useful."*
+> *"Don't just make it work. Make it understandable, maintainable, and useful."*
 
 <br>
 
 ---
 
-## `~/ 02. what-i-build`
+### `~/ 02. what-i-build`
+
+#### `FEATURED ARCHITECTURAL LAYER`
 
 <table>
   <tr>
-    <td width="25%" align="center" valign="top">
-      <h3>🌐</h3>
-      <b>FULL STACK</b><br><br>
-      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /><br>
-      <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" />
-    </td>
-    <td width="25%" align="center" valign="top">
-      <h3>⚛️</h3>
-      <b>FRONTEND</b><br><br>
-      <img src="https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB" /><br>
-      <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
-    </td>
-    <td width="25%" align="center" valign="top">
-      <h3>⚙️</h3>
-      <b>BACKEND</b><br><br>
-      <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Go-00ADD8?style=flat-square&logo=go&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" />
-    </td>
-    <td width="25%" align="center" valign="top">
-      <h3>🗄️</h3>
-      <b>DATABASES</b><br><br>
-      <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Prisma-2D3748?style=flat-square&logo=prisma&logoColor=white" />
-    </td>
-  </tr>
+    <td width="100%" valign="top">
+
+#### **01. Full-Stack Systems Architecture**
+*End-to-end applications designed with strict system boundaries, typed contracts, and zero-downtime deployment.*
+
+`Core Stack:` **React** · **Next.js** · **TypeScript** · **FastAPI** · **Node.js** · **PostgreSQL** · **Redis** · **Docker**
+
+</td>
+</tr>
+</table>
+
+#### `APPLICATION & DATA LAYERS`
+
+<table>
   <tr>
-    <td width="25%" align="center" valign="top">
-      <h3>☁️</h3>
-      <b>CLOUD & DEVOPS</b><br><br>
-      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
-    </td>
-    <td width="25%" align="center" valign="top">
-      <h3>🤖</h3>
-      <b>AI / ML</b><br><br>
-      <img src="https://img.shields.io/badge/OpenAI-412991?style=flat-square&logo=openai&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/HuggingFace-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /><br>
-      <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-    </td>
-    <td width="25%" align="center" valign="top">
-      <h3>🛠️</h3>
-      <b>DEV TOOLS</b><br><br>
-      <img src="https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Linux-FCC624?style=flat-square&logo=linux&logoColor=black" /><br>
-      <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/VSCode-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white" />
-    </td>
-    <td width="25%" align="center" valign="top">
-      <h3>🔐</h3>
-      <b>SECURITY & AUTH</b><br><br>
-      <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/OAuth2-4285F4?style=flat-square&logo=google&logoColor=white" /><br>
-      <img src="https://img.shields.io/badge/Bcrypt-30363D?style=flat-square" /><br>
-      <img src="https://img.shields.io/badge/TLS%201.3-39D353?style=flat-square" />
-    </td>
-  </tr>
+    <td width="50%" valign="top">
+
+#### **02. Frontend Engineering**
+*Accessible, performance-critical web applications with component systems and server-side rendering.*
+
+- **Technologies:** React, Next.js, Tailwind CSS, Vue, Vite
+- **Focus:** Micro-interactions, Web Vitals, Responsive Design
+
+</td>
+<td width="50%" valign="top">
+
+#### **03. Backend & Distributed APIs**
+*Robust application servers, schema routing, background workers, and low-latency API contracts.*
+
+- **Technologies:** Node.js, FastAPI, Go, Express, GraphQL
+- **Focus:** Auth boundaries, rate-limiting, error handling
+
+</td>
+</tr>
+  <tr>
+    <td width="50%" valign="top">
+
+#### **04. Database & Cache Modeling**
+*Relational database normalization, indexing strategies, and multi-tier in-memory caching.*
+
+- **Technologies:** PostgreSQL, MongoDB, Redis, Prisma
+- **Focus:** Query optimization, sub-millisecond key lookups
+
+</td>
+<td width="50%" valign="top">
+
+#### **05. Cloud Infrastructure & CI/CD**
+*Reproducible container environments, continuous deployment, and telemetry infrastructure.*
+
+- **Technologies:** Docker, GitHub Actions, AWS, Linux CLI
+- **Focus:** Automated validation, environment isolation
+
+</td>
+</tr>
+</table>
+
+#### `SPECIALIZED CAPABILITIES`
+
+<table>
+  <tr>
+    <td width="33.3%" valign="top">
+
+**06. AI / ML Integration**  
+*Vector embeddings &amp; LLM tooling.*  
+`OpenAI` · `LangChain` · `PyTorch`
+
+</td>
+<td width="33.3%" valign="top">
+
+**07. Developer Tooling**  
+*CLI automation &amp; git workflows.*  
+`Bash` · `Python` · `Make` · `Git`
+
+</td>
+<td width="33.3%" valign="top">
+
+**08. Security &amp; Auth**  
+*Defensive validation &amp; zero secrets.*  
+`OAuth 2.0` · `JWT` · `TLS 1.3`
+
+</td>
+</tr>
 </table>
 
 <br>
 
 ---
 
-## `~/ 03. toolbox`
+### `~/ 03. toolbox`
 
 <div align="center">
   <img src="./toolbox.svg" width="940" alt="Zaid Developer Stack Matrix" />
@@ -188,87 +180,49 @@ zaid@github:~$ whoami
 
 <br>
 
-<!-- TECHNOLOGY WALL WITH HIERARCHY -->
-<div align="center">
-
-<p>
-  <b>LANGUAGES</b><br>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white" />
-  <img src="https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white" />
-  <img src="https://img.shields.io/badge/Java-ED8B00?style=flat-square&logo=openjdk&logoColor=white" />
-  <img src="https://img.shields.io/badge/C++-00599C?style=flat-square&logo=cplusplus&logoColor=white" />
-  <img src="https://img.shields.io/badge/Bash-4EAA25?style=flat-square&logo=gnubash&logoColor=white" />
-</p>
-
-<p>
-  <b>FRONTEND</b><br>
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vue-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white" />
-  <img src="https://img.shields.io/badge/Svelte-FF3E00?style=flat-square&logo=svelte&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white" />
-</p>
-
-<p>
-  <b>BACKEND & APIS</b><br>
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/NestJS-E0234E?style=flat-square&logo=nestjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white" />
-  <img src="https://img.shields.io/badge/GraphQL-E10098?style=flat-square&logo=graphql&logoColor=white" />
-</p>
-
-<p>
-  <b>DATABASE & DEVOPS</b><br>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" />
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white" />
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" />
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white" />
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonwebservices&logoColor=white" />
-  <img src="https://img.shields.io/badge/Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
-</p>
-
-</div>
-
-<br>
-
----
-
-## `~/ 04. skill-radar`
-
+<!-- STRUCTURED TECHNICAL INDEX -->
 <table>
   <tr>
-    <td width="60%" align="center" valign="middle">
-      <img src="./skill-radar.svg" width="100%" alt="Skill Radar" />
-    </td>
-    <td width="40%" valign="middle">
-
-<div align="center">
-
-[![STRONG](https://img.shields.io/badge/%E2%97%8F%20STRONG-Frontend%20%7C%20Full%20Stack%20%7C%20Architecture-39D353?style=for-the-badge)](#)
-<br><br>
-[![WORKING](https://img.shields.io/badge/%E2%97%8F%20WORKING-Backend%20%7C%20Databases%20%7C%20Cloud%20%7C%20Testing-58A6FF?style=for-the-badge)](#)
-<br><br>
-[![EXPLORING](https://img.shields.io/badge/%E2%97%8F%20EXPLORING-LLM%20Pipelines%20%7C%20Distributed%20Systems-FF8C00?style=for-the-badge)](#)
-
-</div>
-
-</td>
-</tr>
+    <td width="22%"><code>LANGUAGES</code></td>
+    <td><strong>TypeScript</strong> · <strong>JavaScript</strong> · <strong>Python</strong> · <strong>Go</strong> · <strong>Rust</strong> · <strong>Java</strong> · <strong>C++</strong> · <strong>SQL</strong> · <strong>Bash</strong></td>
+  </tr>
+  <tr>
+    <td width="22%"><code>FRONTEND</code></td>
+    <td><strong>React</strong> · <strong>Next.js</strong> · <strong>Tailwind CSS</strong> · <strong>Vue</strong> · <strong>Angular</strong> · <strong>Svelte</strong> · <strong>Vite</strong> · <strong>HTML5/CSS3</strong></td>
+  </tr>
+  <tr>
+    <td width="22%"><code>BACKEND &amp; APIS</code></td>
+    <td><strong>Node.js</strong> · <strong>FastAPI</strong> · <strong>Express</strong> · <strong>NestJS</strong> · <strong>Django</strong> · <strong>Flask</strong> · <strong>REST</strong> · <strong>GraphQL</strong></td>
+  </tr>
+  <tr>
+    <td width="22%"><code>DATABASES</code></td>
+    <td><strong>PostgreSQL</strong> · <strong>MongoDB</strong> · <strong>Redis</strong> · <strong>MySQL</strong> · <strong>SQLite</strong> · <strong>Prisma ORM</strong> · <strong>SQLAlchemy</strong></td>
+  </tr>
+  <tr>
+    <td width="22%"><code>DEVOPS &amp; CLOUD</code></td>
+    <td><strong>Docker</strong> · <strong>Kubernetes</strong> · <strong>GitHub Actions</strong> · <strong>AWS</strong> · <strong>Azure</strong> · <strong>Linux</strong></td>
+  </tr>
+  <tr>
+    <td width="22%"><code>TESTING &amp; QA</code></td>
+    <td><strong>Jest</strong> · <strong>Vitest</strong> · <strong>Pytest</strong> · <strong>Playwright</strong> · <strong>Cypress</strong> · <strong>Testing Library</strong></td>
+  </tr>
 </table>
 
 <br>
 
 ---
 
-## `~/ 05. system-architecture`
+### `~/ 04. skill-radar`
+
+<div align="center">
+  <img src="./skill-radar.svg" width="940" alt="Zaid Technical Capability Radar" />
+</div>
+
+<br>
+
+---
+
+### `~/ 05. system-architecture`
 
 <div align="center">
   <img src="./system-architecture.svg" width="940" alt="Zaid System Architecture Flow" />
@@ -278,123 +232,71 @@ zaid@github:~$ whoami
 
 ---
 
-## `~/ 07. engineering-principles`
+### `~/ 07. engineering-principles`
 
-<!-- 8 PRINCIPLES WALL AS VISUAL CARDS -->
-<table>
-  <tr>
-    <td width="25%" align="center" title="Software exists to solve real problems for real people">
-      <h3>👤</h3>
-      <b>USER FIRST</b><br>
-      <img src="https://img.shields.io/badge/CORE-UX-39D353?style=flat-square" />
-    </td>
-    <td width="25%" align="center" title="Code is read ten times more often than it is written">
-      <h3>📖</h3>
-      <b>READABILITY</b><br>
-      <img src="https://img.shields.io/badge/STANDARD-CLEAN%20CODE-58A6FF?style=flat-square" />
-    </td>
-    <td width="25%" align="center" title="Zero-leak secret habits and defensive boundaries from day zero">
-      <h3>🔐</h3>
-      <b>SECURITY</b><br>
-      <img src="https://img.shields.io/badge/HABIT-ZERO%20LEAK-FF5F56?style=flat-square" />
-    </td>
-    <td width="25%" align="center" title="Speed and low memory footprints improve user retention">
-      <h3>⚡</h3>
-      <b>PERFORMANCE</b><br>
-      <img src="https://img.shields.io/badge/METRIC-LOW%20LATENCY-FF8C00?style=flat-square" />
-    </td>
-  </tr>
-  <tr>
-    <td width="25%" align="center" title="Semantic markup, keyboard navigation and screen-reader access">
-      <h3>♿</h3>
-      <b>ACCESSIBILITY</b><br>
-      <img src="https://img.shields.io/badge/STANDARD-WCAG%20AA-39D353?style=flat-square" />
-    </td>
-    <td width="25%" align="center" title="Test critical business logic, contracts and edge cases">
-      <h3>🧪</h3>
-      <b>TESTING</b><br>
-      <img src="https://img.shields.io/badge/ASSURANCE-AUTOMATED%20QA-58A6FF?style=flat-square" />
-    </td>
-    <td width="25%" align="center" title="If a task must be executed twice, automate it in a script">
-      <h3>🔧</h3>
-      <b>AUTOMATION</b><br>
-      <img src="https://img.shields.io/badge/SPEED-CI%2FCD-FFD166?style=flat-square&logoColor=080B10" />
-    </td>
-    <td width="25%" align="center" title="Record why architectural decisions and tradeoffs were chosen">
-      <h3>📝</h3>
-      <b>DOCUMENTATION</b><br>
-      <img src="https://img.shields.io/badge/RECORD-DECISION%20LOGS-79C0FF?style=flat-square" />
-    </td>
-  </tr>
-</table>
-
-<br>
-
----
-
-## `~/ 08. selected-work`
-
+<!-- 2-COLUMN COMPACT INDEX MATRIX -->
 <table>
   <tr>
     <td width="50%" valign="top">
 
-```text
-$ cd projects/system-profile-os
-```
+`01. User First`  
+Software exists to solve genuine problems for real humans, not to exhibit gratuitous technical complexity.
 
-<img src="./project-devos.svg" width="100%" alt="Developer OS Project Preview" />
+---
 
-#### **Developer Operating System Engine**
-`Zaid7829/Zaid7829`
+`02. Simplicity Wins`  
+Choose clear, straightforward implementations over clever, opaque abstractions every single time.
 
-<p>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/SVG-FFB13B?style=flat-square&logo=svg&logoColor=black" />
-  <img src="https://img.shields.io/badge/Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
-</p>
+---
 
-<p>
-  <img src="https://img.shields.io/badge/STATUS-LIVE-39D353?style=flat-square" />
-  &nbsp;
-  <a href="https://github.com/Zaid7829/Zaid7829">
-    <img src="https://img.shields.io/badge/GitHub-%E2%9E%9C-111820?style=flat-square&logo=github&logoColor=white" alt="Source" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/Zaid7829">
-    <img src="https://img.shields.io/badge/Demo-%E2%9E%9C-58A6FF?style=flat-square&logo=googlechrome&logoColor=white" alt="Demo" />
-  </a>
-</p>
+`03. Readability Matters`  
+Code is read ten times more often than it is written. Design self-documenting code with clear semantics.
+
+---
+
+`04. Security by Default`  
+Incorporate zero-leak secret habits, strict boundary sanitization, and least-privilege auth from day zero.
+
+---
+
+`05. Performance is a Feature`  
+Speed is a foundational feature. Minimize network roundtrips, optimize query execution, and prevent leaks.
+
+---
+
+`06. Accessibility Counts`  
+Semantic markup, keyboard navigability, high contrast, and screen-reader access are core quality requirements.
 
 </td>
 <td width="50%" valign="top">
 
-```text
-$ cd projects/fullstack-app-suite
-```
+`07. Automate the Routine`  
+If a task, validation, or build must be executed more than twice, encode it into a deterministic script.
 
-<img src="./project-staging.svg" width="100%" alt="Fullstack Staging Suite Preview" />
+---
 
-#### **Full-Stack Application Staging Suite**
-`Standardized Full-Stack Architecture Pipeline`
+`08. Test Behavior`  
+Test critical business logic, contracts, edge cases, and user journeys rather than trivial implementation details.
 
-<p>
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-  <img src="https://img.shields.io/badge/Postgres-4169E1?style=flat-square&logo=postgresql&logoColor=white" />
-</p>
+---
 
-<p>
-  <img src="https://img.shields.io/badge/STATUS-STAGED-58A6FF?style=flat-square" />
-  &nbsp;
-  <a href="./PROJECT_TEMPLATE.md">
-    <img src="https://img.shields.io/badge/Spec-%E2%9E%9C-111820?style=flat-square&logo=markdown&logoColor=white" alt="Spec" />
-  </a>
-  &nbsp;
-  <a href="https://github.com/Zaid7829">
-    <img src="https://img.shields.io/badge/Repos-%E2%9E%9C-58A6FF?style=flat-square&logo=github&logoColor=white" alt="Repos" />
-  </a>
-</p>
+`09. Document Decisions`  
+Record *why* architectural choices and tradeoffs were made, not simply *what* files were modified.
+
+---
+
+`10. Small Iterations`  
+Deploy small, testable, incremental improvements continuously rather than stalling for delayed monoliths.
+
+---
+
+`11. Learn from Bugs`  
+Root cause every defect. Fix the underlying design assumption and add regression guards to prevent repeat issues.
+
+---
+
+`12. Useful Software`  
+Functional software delivered reliably into users' hands always beats unreleased theoretical perfection.
 
 </td>
 </tr>
@@ -404,27 +306,83 @@ $ cd projects/fullstack-app-suite
 
 ---
 
-## 🛡️ `PROJECT QUALITY GATE`
+### `~/ 08. selected-work`
+
+<!-- PROJECT 01: VISUAL LEFT, SPEC RIGHT -->
+
+```text
+zaid@github:~$ cd projects/system-profile-os
+```
+
+<table>
+  <tr>
+    <td width="55%" valign="top" align="center">
+      <img src="./project-devos.svg" width="100%" alt="Developer OS Engine Preview" />
+    </td>
+    <td width="45%" valign="top">
+
+#### **Developer Operating System Engine**
+`Zaid7829/Zaid7829`
+
+- **Problem:** Developer profiles frequently rely on fragile third-party dynamic badge APIs that break or slow down page loads.
+- **Architecture:** `GitHub Actions Engine` → `Deterministic Python Renderers` → `Native SVG Vector Output`
+- **Stack:** Python 3.11 · SVG/XML · GitHub Actions CI · Bash
+- **Status:** `● Production Live`
+
+<br>
+
+[**View Source Code →**](https://github.com/Zaid7829/Zaid7829) &nbsp;|&nbsp; [**Live README Profile →**](https://github.com/Zaid7829)
+
+</td>
+</tr>
+</table>
+
+<br>
+
+<!-- PROJECT 02: SPEC LEFT, VISUAL RIGHT -->
+
+```text
+zaid@github:~$ cd projects/fullstack-app-suite
+```
+
+<table>
+  <tr>
+    <td width="45%" valign="top">
+
+#### **Full-Stack Application Staging Suite**
+`Standardized Application Pipeline`
+
+- **Problem:** Transitioning from prototype to production requires reproducible environments and strict contract validation.
+- **Architecture:** `Next.js SSR Frontend` → `FastAPI & Node.js API Gateway` → `PostgreSQL & Redis Cache`
+- **Stack:** TypeScript · Next.js · FastAPI · PostgreSQL · Docker
+- **Status:** `● Staging Ready`
+
+<br>
+
+[**View Architecture Spec →**](./PROJECT_TEMPLATE.md) &nbsp;|&nbsp; [**All Repositories →**](https://github.com/Zaid7829)
+
+</td>
+<td width="55%" valign="top" align="center">
+      <img src="./project-staging.svg" width="100%" alt="Fullstack Staging Suite Preview" />
+    </td>
+</tr>
+</table>
+
+<br>
+
+---
+
+### 🛡️ `PROJECT QUALITY GATE`
 
 <div align="center">
-  <img src="./quality-gate.svg" width="940" alt="System Quality Gate Radial Chart" />
+  <img src="./quality-gate.svg" width="720" alt="Terminal Quality Gate Status Grid" />
 </div>
 
 <br>
 
 ---
 
-## `~/ 09. developer-workflow`
-
-<div align="center">
-  <img src="./workflow-pipeline.svg" width="940" alt="Developer Workflow Pipeline" />
-</div>
-
-<br>
-
----
-
-## `~/ 10. github-activity`
+### `~/ 10. github-activity`
 
 <div align="center">
 
@@ -432,71 +390,13 @@ $ cd projects/fullstack-app-suite
   <img src="./contrib-heatmap.svg" width="940" alt="Zaid GitHub Contribution Heatmap" />
 </a>
 
-<br><br>
-
-<table>
-  <tr>
-    <td width="33%" align="center">
-      <h3>📈</h3>
-      <b>COMMIT RHYTHM</b><br>
-      <img src="https://img.shields.io/badge/COMMITS-ATOMIC%20%26%20TYPED-39D353?style=flat-square" />
-    </td>
-    <td width="34%" align="center">
-      <h3>⚙️</h3>
-      <b>TELEMETRY ENGINE</b><br>
-      <img src="https://img.shields.io/badge/SYNC-SCHEDULED%20CRON-58A6FF?style=flat-square&logo=githubactions&logoColor=white" />
-    </td>
-    <td width="33%" align="center">
-      <h3>🐙</h3>
-      <b>DATA SOURCE</b><br>
-      <img src="https://img.shields.io/badge/SOURCE-github.com%2FZaid7829-181717?style=flat-square&logo=github&logoColor=white" />
-    </td>
-  </tr>
-</table>
-
 </div>
 
 <br>
 
 ---
 
-## `~/ 11. open-source-mindset`
-
-<table>
-  <tr>
-    <td width="20%" align="center" title="Consistent naming conventions, explicit schemas, and structured errors">
-      <h3>🔌</h3>
-      <b>Predictable APIs</b><br>
-      <img src="https://img.shields.io/badge/SCHEMA-STRICT-58A6FF?style=flat-square" />
-    </td>
-    <td width="20%" align="center" title="Documented environment vars, deterministic locks, and clean containers">
-      <h3>📦</h3>
-      <b>Reproducible Envs</b><br>
-      <img src="https://img.shields.io/badge/ENV-DETERMINISTIC-39D353?style=flat-square" />
-    </td>
-    <td width="20%" align="center" title="Granular, descriptive commit logs that communicate why">
-      <h3>🧱</h3>
-      <b>Atomic Commits</b><br>
-      <img src="https://img.shields.io/badge/GIT-ATOMIC-FF8C00?style=flat-square" />
-    </td>
-    <td width="20%" align="center" title="Validating network inputs and handling edge-case failures">
-      <h3>🛡️</h3>
-      <b>Defensive Habits</b><br>
-      <img src="https://img.shields.io/badge/DEFENSE-SECURE-FF5F56?style=flat-square" />
-    </td>
-    <td width="20%" align="center" title="Writing readable, accessible code and docs so peers build with confidence">
-      <h3>🤝</h3>
-      <b>Collaborator Respect</b><br>
-      <img src="https://img.shields.io/badge/TEAM-RESPECT-79C0FF?style=flat-square" />
-    </td>
-  </tr>
-</table>
-
-<br>
-
----
-
-## `~/ 12. contact`
+### `~/ 12. contact`
 
 ```text
 zaid@github:~$ ./connect
@@ -507,43 +407,31 @@ zaid@github:~$ ./connect
 <table width="100%">
   <tr>
     <td width="33.3%" align="center" valign="middle">
-      <br>
-      <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /><br><br>
-      <h3>◉</h3>
-      <b>@Zaid7829</b><br><br>
-      <a href="https://github.com/Zaid7829">
-        <img src="https://img.shields.io/badge/Open%20Profile-%E2%9E%9C-111820?style=flat-square" alt="GitHub" />
-      </a>
-      <br><br>
+      <code>GITHUB</code><br>
+      <strong>@Zaid7829</strong><br><br>
+      <a href="https://github.com/Zaid7829"><strong>github.com/Zaid7829 →</strong></a>
     </td>
     <td width="33.3%" align="center" valign="middle">
-      <br>
-      <img src="https://img.shields.io/badge/Email-FF8C00?style=for-the-badge&logo=gmail&logoColor=white" /><br><br>
-      <h3>✉️</h3>
-      <b>Direct Mail</b><br><br>
-      <a href="mailto:mdyusuffaiz517@gmail.com">
-        <img src="https://img.shields.io/badge/Send%20Message-%E2%9E%9C-FF8C00?style=flat-square" alt="Email" />
-      </a>
-      <br><br>
+      <code>EMAIL</code><br>
+      <strong>mdyusuffaiz517@gmail.com</strong><br><br>
+      <a href="mailto:mdyusuffaiz517@gmail.com"><strong>Send Message →</strong></a>
     </td>
     <td width="33.3%" align="center" valign="middle">
-      <br>
-      <img src="https://img.shields.io/badge/Repository-58A6FF?style=for-the-badge&logo=git&logoColor=white" /><br><br>
-      <h3>◈</h3>
-      <b>Source Code</b><br><br>
-      <a href="https://github.com/Zaid7829/Zaid7829">
-        <img src="https://img.shields.io/badge/Explore%20Code-%E2%9E%9C-58A6FF?style=flat-square" alt="Repo" />
-      </a>
-      <br><br>
+      <code>REPOSITORY</code><br>
+      <strong>Zaid7829/Zaid7829</strong><br><br>
+      <a href="https://github.com/Zaid7829/Zaid7829"><strong>View Profile Source →</strong></a>
     </td>
   </tr>
 </table>
 
 <br>
 
-<a href="mailto:mdyusuffaiz517@gmail.com">
-  <img src="https://img.shields.io/badge/%EF%BC%84%20--%3E%20LET'S%20TALK%20%E2%96%B6-39D353?style=for-the-badge&logo=minutemailer&logoColor=080B10" alt="Let's Talk" />
-</a>
+#### **READY TO BUILD SOMETHING USEFUL?**
+
+<p>
+  <a href="mailto:mdyusuffaiz517@gmail.com"><strong>[ LET'S TALK → ]</strong></a> &nbsp;|&nbsp;
+  <a href="https://github.com/Zaid7829"><strong>[ EXPLORE REPOSITORIES → ]</strong></a>
+</p>
 
 </div>
 
