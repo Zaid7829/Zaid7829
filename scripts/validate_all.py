@@ -20,21 +20,11 @@ for jf in json_files:
 print("\n=== 3. SVG XML Validation ===")
 svg_files = [
     "avi-dotmatrix.svg",
-    "avi-dotmatrix-static.svg",
-    "avi-ascii.svg",
-    "info-card.svg",
-    "contrib-heatmap.svg",
-    "skill-radar.svg",
-    "toolbox.svg",
-    "system-status.svg",
-    "hero-constellation.svg",
-    "system-architecture.svg",
-    "quality-gate.svg",
-    "workflow-pipeline.svg",
-    "project-devos.svg",
-    "project-staging.svg",
     "hero-name.svg",
-    "terminal-footer.svg"
+    "info-card.svg",
+    "toolbox.svg",
+    "skill-radar.svg",
+    "contrib-heatmap.svg"
 ]
 for sf in svg_files:
     p = Path(sf)

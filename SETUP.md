@@ -1,6 +1,6 @@
 # Zaid7829 GitHub Profile — Complete Setup
 
-This repository contains a terminal-style developer portfolio rendered inside GitHub's profile README environment. It features high-density dot-matrix particle portrait art, a live contribution heatmap, technical skill radar visualizations, a unified developer toolbox, and a real-time system status card.
+This repository contains a terminal-style developer portfolio rendered inside GitHub's profile README environment. It features high-density dot-matrix particle portrait art, an animated typewriter name, an interactive developer card, a technology radar dashboard, technical skill radar visualizations, and an animated GitHub contribution heatmap with a roaming snake.
 
 GitHub displays a profile README when:
 1. The repository name exactly matches your username (`Zaid7829/Zaid7829`).
@@ -18,13 +18,11 @@ Zaid7829/
 ├── PROJECT_TEMPLATE.md            # Template for adding verified projects
 │
 ├── avi-dotmatrix.svg              # Animated high-density particle portrait (760x760)
-├── avi-dotmatrix-static.svg       # Static high-density particle portrait (760x760)
-├── avi-ascii.svg                  # Alternative ASCII portrait
-├── info-card.svg                  # Terminal developer system card (760x760)
-├── contrib-heatmap.svg            # Animated GitHub contribution heatmap (940x265)
+├── hero-name.svg                  # Animated typewriter header (600x64)
+├── info-card.svg                  # Terminal developer system card (760x304)
+├── toolbox.svg                    # Technology radar dashboard (940x850)
 ├── skill-radar.svg                # Dual-axis technical skill radar chart (940x440)
-├── toolbox.svg                    # Standalone technology radar dashboard (940x580)
-├── system-status.svg              # Real-time development focus panel (940x250)
+├── contrib-heatmap.svg            # Animated GitHub contribution heatmap (940x265)
 │
 ├── data/
 │   ├── design.json                # Unified visual design tokens (colors, motion, typography)
@@ -32,16 +30,18 @@ Zaid7829/
 │   ├── skills.json                # Self-assessed skill radar configuration
 │   └── contributions.json         # Cached contribution calendar data
 │
+├── icons/                         # Brand and category SVGs
+│
 ├── scripts/
 │   ├── fetch_contributions.py     # Scrapes public GitHub contribution calendar
 │   ├── render_heatmap_svg.py      # Renders animated contribution heatmap SVG
 │   ├── render_skill_radar.py      # Renders dual skill radar SVG
 │   ├── render_toolbox_svg.py      # Renders standalone toolbox SVG
-│   ├── render_system_status.py    # Renders system status panel SVG
+│   ├── render_name_svg.py         # Renders animated typewriter header SVG
 │   ├── make_dotmatrix_svg.py      # Generates dot-matrix particle portrait SVG
 │   ├── make_info_card.py          # Generates developer system info card SVG
-│   ├── make_ascii_svg.py          # Generates ASCII portrait SVG
 │   ├── prep_photo.py              # Preprocesses raw photos for portrait generation
+│   ├── preview.py                 # Local GitHub markdown browser previewer
 │   ├── validate_all.py            # End-to-end repository syntax and security validator
 │   ├── requirements.txt           # Lightweight dependencies for daily workflow
 │   └── requirements-local.txt     # Local-only dependencies (OpenCV, PIL, rembg)
@@ -80,13 +80,6 @@ To regenerate the standalone toolbox dashboard:
 python scripts/render_toolbox_svg.py
 ```
 
-### System Status (`system-status.svg`)
-To regenerate the building/learning/exploring status panel:
-
-```bash
-python scripts/render_system_status.py
-```
-
 ### Portrait Regeneration (`scripts/make_dotmatrix_svg.py`)
 To generate a new dot-matrix particle portrait from a photograph:
 
@@ -123,7 +116,7 @@ The workflow at `.github/workflows/update-profile-art.yml`:
 - Supports manual triggering (`workflow_dispatch`) from the Actions tab.
 - Uses `GITHUB_TOKEN` with `contents: write` permissions.
 - Installs only lightweight dependencies (`requests`, `beautifulsoup4`).
-- Refreshes `contrib-heatmap.svg`, `skill-radar.svg`, `toolbox.svg`, and `system-status.svg` only when changes occur.
+- Refreshes `contrib-heatmap.svg`, `skill-radar.svg`, `toolbox.svg`, and `hero-name.svg` only when changes occur.
 
 ---
 
