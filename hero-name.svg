@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 60" width="600" height="60" role="img" aria-label="Zaid typewriter name banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 64" width="600" height="64" role="img" aria-label="Zaid typewriter name banner">
   <title>Z A I D</title>
   <style>
     .type-text {
@@ -14,7 +14,7 @@
       font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
       font-weight: 300;
       font-size: 32px;
-      animation: cursorBlink 0.65s step-end infinite;
+      animation: cursorBlink 0.85s step-end infinite;
     }
     @keyframes cursorBlink {
       0%, 100% { opacity: 1; }
@@ -23,7 +23,7 @@
     /* Cycle 0: Electric Cyan (#38BDF8) */
     .cycle-0 {
       fill: #38BDF8;
-      animation: cycleAnim0 21.0s infinite;
+      animation: cycleAnim0 48.0s infinite;
     }
     @keyframes cycleAnim0 {
       0%, 16.66% { opacity: 1; visibility: visible; }
@@ -32,7 +32,7 @@
     /* Cycle 1: Terminal Green (#39D353) */
     .cycle-1 {
       fill: #39D353;
-      animation: cycleAnim1 21.0s infinite;
+      animation: cycleAnim1 48.0s infinite;
     }
     @keyframes cycleAnim1 {
       0%, 16.66% { opacity: 0; visibility: hidden; }
@@ -42,7 +42,7 @@
     /* Cycle 2: Cyberpunk Violet (#A371F7) */
     .cycle-2 {
       fill: #A371F7;
-      animation: cycleAnim2 21.0s infinite;
+      animation: cycleAnim2 48.0s infinite;
     }
     @keyframes cycleAnim2 {
       0%, 33.32% { opacity: 0; visibility: hidden; }
@@ -52,7 +52,7 @@
     /* Cycle 3: Sunset Amber (#FF8C00) */
     .cycle-3 {
       fill: #FF8C00;
-      animation: cycleAnim3 21.0s infinite;
+      animation: cycleAnim3 48.0s infinite;
     }
     @keyframes cycleAnim3 {
       0%, 49.99% { opacity: 0; visibility: hidden; }
@@ -62,7 +62,7 @@
     /* Cycle 4: Neon Rose (#F43F5E) */
     .cycle-4 {
       fill: #F43F5E;
-      animation: cycleAnim4 21.0s infinite;
+      animation: cycleAnim4 48.0s infinite;
     }
     @keyframes cycleAnim4 {
       0%, 66.66% { opacity: 0; visibility: hidden; }
@@ -72,57 +72,57 @@
     /* Cycle 5: Platinum White (#F0F6FC) */
     .cycle-5 {
       fill: #F0F6FC;
-      animation: cycleAnim5 21.0s infinite;
+      animation: cycleAnim5 48.0s infinite;
     }
     @keyframes cycleAnim5 {
       0%, 83.32% { opacity: 0; visibility: hidden; }
       83.33%, 100% { opacity: 1; visibility: visible; }
     }
     .frame-0 {
-      animation: frameAnim0 3.5s infinite;
+      animation: frameAnim0 8.0s infinite;
     }
     @keyframes frameAnim0 {
       0.00%, 9.99% { opacity: 1; visibility: visible; }
-      10.00%, 88.49% { opacity: 0; visibility: hidden; }
-      88.50%, 99.99% { opacity: 1; visibility: visible; }
+      10.00%, 91.87% { opacity: 0; visibility: hidden; }
+      91.88%, 99.99% { opacity: 1; visibility: visible; }
     }
     .frame-1 {
-      animation: frameAnim1 3.5s infinite;
+      animation: frameAnim1 8.0s infinite;
     }
     @keyframes frameAnim1 {
       0.00%, 9.99% { opacity: 0; visibility: hidden; }
-      10.00%, 19.99% { opacity: 1; visibility: visible; }
-      20.00%, 82.79% { opacity: 0; visibility: hidden; }
-      82.80%, 88.49% { opacity: 1; visibility: visible; }
-      88.50%, 100% { opacity: 0; visibility: hidden; }
+      10.00%, 19.37% { opacity: 1; visibility: visible; }
+      19.38%, 86.24% { opacity: 0; visibility: hidden; }
+      86.25%, 91.87% { opacity: 1; visibility: visible; }
+      91.88%, 100% { opacity: 0; visibility: hidden; }
     }
     .frame-2 {
-      animation: frameAnim2 3.5s infinite;
+      animation: frameAnim2 8.0s infinite;
     }
     @keyframes frameAnim2 {
-      0.00%, 19.99% { opacity: 0; visibility: hidden; }
-      20.00%, 29.99% { opacity: 1; visibility: visible; }
-      30.00%, 77.09% { opacity: 0; visibility: hidden; }
-      77.10%, 82.79% { opacity: 1; visibility: visible; }
-      82.80%, 100% { opacity: 0; visibility: hidden; }
+      0.00%, 19.37% { opacity: 0; visibility: hidden; }
+      19.38%, 28.74% { opacity: 1; visibility: visible; }
+      28.75%, 80.61% { opacity: 0; visibility: hidden; }
+      80.62%, 86.24% { opacity: 1; visibility: visible; }
+      86.25%, 100% { opacity: 0; visibility: hidden; }
     }
     .frame-3 {
-      animation: frameAnim3 3.5s infinite;
+      animation: frameAnim3 8.0s infinite;
     }
     @keyframes frameAnim3 {
-      0.00%, 29.99% { opacity: 0; visibility: hidden; }
-      30.00%, 39.99% { opacity: 1; visibility: visible; }
-      40.00%, 71.39% { opacity: 0; visibility: hidden; }
-      71.40%, 77.09% { opacity: 1; visibility: visible; }
-      77.10%, 100% { opacity: 0; visibility: hidden; }
+      0.00%, 28.74% { opacity: 0; visibility: hidden; }
+      28.75%, 38.11% { opacity: 1; visibility: visible; }
+      38.12%, 74.99% { opacity: 0; visibility: hidden; }
+      75.00%, 80.61% { opacity: 1; visibility: visible; }
+      80.62%, 100% { opacity: 0; visibility: hidden; }
     }
     .frame-4 {
-      animation: frameAnim4 3.5s infinite;
+      animation: frameAnim4 8.0s infinite;
     }
     @keyframes frameAnim4 {
-      0.00%, 39.99% { opacity: 0; visibility: hidden; }
-      40.00%, 71.39% { opacity: 1; visibility: visible; }
-      71.40%, 100% { opacity: 0; visibility: hidden; }
+      0.00%, 38.11% { opacity: 0; visibility: hidden; }
+      38.12%, 74.99% { opacity: 1; visibility: visible; }
+      75.00%, 100% { opacity: 0; visibility: hidden; }
     }
   </style>
   <!-- Cycle 0: Electric Cyan -->

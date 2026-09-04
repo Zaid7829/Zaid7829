@@ -1,9 +1,13 @@
 <div align="center">
 
 <!-- PROFILE IMAGE FIRST -->
-<img src="./avi-dotmatrix-static.svg" width="280" alt="Zaid portrait" />
+<img src="./avi-dotmatrix-static.svg" width="380" alt="Zaid portrait" />
 
-<img src="./hero-name.svg" width="440" alt="Z A I D" />
+<br><br>
+
+<img src="./hero-name.svg" width="460" alt="Z A I D" />
+
+<br>
 
 ### **Full Stack Developer &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Builder**
 

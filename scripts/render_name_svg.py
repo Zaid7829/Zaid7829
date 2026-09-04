@@ -3,7 +3,7 @@
 Generate an animated typewriter SVG for Zaid's GitHub profile header.
 Specifications:
 - Text: "Z  A  I  D" (clean, elegant, bold tracking)
-- True typewriter effect: types letter by letter with a realistic cadence and blinking cursor
+- True slow typewriter effect: deliberate, slow mechanical cadence with relaxed blinking cursor
 - Color cycle: Types out in a different vibrant accent color every cycle:
     1. Electric Cyan    (#38BDF8)
     2. Terminal Green   (#39D353)
@@ -14,7 +14,7 @@ Specifications:
 - Fixed start coordinate: Text does NOT shift/jitter while typing; types naturally from left to right.
 - Perfectly centered when full name is typed.
 - Self-contained SVG, zero external dependencies, 100% GitHub camo & dark-mode compatible.
-- Size: 600x60 (viewBox: 0 0 600 60)
+- Size: 600x64 (viewBox: 0 0 600 64)
 """
 
 from pathlib import Path
@@ -30,24 +30,25 @@ COLORS = [
     ("#F0F6FC", "Platinum White")
 ]
 
-# Total animation duration: 21s (3.5s per color cycle * 6 colors)
-TOTAL_DURATION = 21.0
+# Total animation duration: 48s (8.0s per color cycle * 6 colors)
+# Slow, relaxed, deliberate typing cadence
+CYCLE_DURATION = 8.0  # seconds per color
 NUM_CYCLES = len(COLORS)
-CYCLE_DURATION = TOTAL_DURATION / NUM_CYCLES  # 3.5s
+TOTAL_DURATION = CYCLE_DURATION * NUM_CYCLES  # 48.0s
 
-# Within each 3.5s cycle:
-# 0.00s - 0.35s (0.0% - 10.0%):  Frame 0: "|" (initial blink)
-# 0.35s - 0.70s (10.0% - 20.0%): Frame 1: "Z |"
-# 0.70s - 1.05s (20.0% - 30.0%): Frame 2: "Z  A |"
-# 1.05s - 1.40s (30.0% - 40.0%): Frame 3: "Z  A  I |"
-# 1.40s - 2.50s (40.0% - 71.4%): Frame 4: "Z  A  I  D |" (hold & admire, cursor blinks)
-# 2.50s - 2.70s (71.4% - 77.1%): Frame 3: "Z  A  I |" (backspace)
-# 2.70s - 2.90s (77.1% - 82.8%): Frame 2: "Z  A |"
-# 2.90s - 3.10s (82.8% - 88.5%): Frame 1: "Z |"
-# 3.10s - 3.50s (88.5% - 100%):  Frame 0: "|" (pause before next color)
+# Within each 8.0s cycle:
+# 0.00s - 0.80s (0.00% - 10.00%): Frame 0: "|" (slow initial blink)
+# 0.80s - 1.55s (10.00% - 19.38%): Frame 1: "Z |" (slow typing)
+# 1.55s - 2.30s (19.38% - 28.75%): Frame 2: "Z  A |" (slow typing)
+# 2.30s - 3.05s (28.75% - 38.12%): Frame 3: "Z  A  I |" (slow typing)
+# 3.05s - 6.00s (38.12% - 75.00%): Frame 4: "Z  A  I  D |" (hold & admire for ~3 full seconds, cursor blinks slowly)
+# 6.00s - 6.45s (75.00% - 80.62%): Frame 3: "Z  A  I |" (backspace)
+# 6.45s - 6.90s (80.62% - 86.25%): Frame 2: "Z  A |" (backspace)
+# 6.90s - 7.35s (86.25% - 91.88%): Frame 1: "Z |" (backspace)
+# 7.35s - 8.00s (91.88% - 100.0%): Frame 0: "|" (pause before next color)
 
-# Monospace metrics (font-size: 36px, cell width = ~21.6px):
-# Total width of "Z  A  I  D" (10 chars: Z, 2sp, A, 2sp, I, 2sp, D) = ~216px.
+# Monospace metrics (font-size: 34px):
+# Total width of "Z  A  I  D" (with double spaces) = ~216px.
 # Center of 600px width = 300px.
 # Start X = 300 - 108 = 192px.
 
@@ -57,7 +58,7 @@ Y_POS = 34
 def generate_svg():
     lines = []
     lines.append('<?xml version="1.0" encoding="UTF-8"?>')
-    lines.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 60" width="600" height="60" role="img" aria-label="Zaid typewriter name banner">')
+    lines.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 64" width="600" height="64" role="img" aria-label="Zaid typewriter name banner">')
     lines.append('  <title>Z A I D</title>')
     lines.append('  <style>')
     lines.append('    .type-text {')
@@ -72,14 +73,14 @@ def generate_svg():
     lines.append('      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;')
     lines.append('      font-weight: 300;')
     lines.append('      font-size: 32px;')
-    lines.append('      animation: cursorBlink 0.65s step-end infinite;')
+    lines.append('      animation: cursorBlink 0.85s step-end infinite;')
     lines.append('    }')
     lines.append('    @keyframes cursorBlink {')
     lines.append('      0%, 100% { opacity: 1; }')
     lines.append('      50% { opacity: 0; }')
     lines.append('    }')
     
-    # 1. Cycle color & visibility keyframes (21s loop)
+    # 1. Cycle color & visibility keyframes (48s loop)
     for i, (color, name) in enumerate(COLORS):
         c_start = (i / NUM_CYCLES) * 100.0
         c_end = ((i + 1) / NUM_CYCLES) * 100.0
@@ -102,13 +103,13 @@ def generate_svg():
             lines.append(f'      {c_end:.2f}%, 100% {{ opacity: 0; visibility: hidden; }}')
         lines.append('    }')
     
-    # 2. Frame cadence keyframes (3.5s loop per cycle)
+    # 2. Frame cadence keyframes (8.0s loop per cycle) - SLOW TYPEWRITER
     frame_timings = [
-        (0, [(0.0, 10.0), (88.5, 100.0)]),
-        (1, [(10.0, 20.0), (82.8, 88.5)]),
-        (2, [(20.0, 30.0), (77.1, 82.8)]),
-        (3, [(30.0, 40.0), (71.4, 77.1)]),
-        (4, [(40.0, 71.4)])
+        (0, [(0.00, 10.00), (91.88, 100.00)]),
+        (1, [(10.00, 19.38), (86.25, 91.88)]),
+        (2, [(19.38, 28.75), (80.62, 86.25)]),
+        (3, [(28.75, 38.12), (75.00, 80.62)]),
+        (4, [(38.12, 75.00)])  # Holds for ~3 full seconds
     ]
     
     for f_idx, intervals in frame_timings:
