@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 """
 Render data/contributions.json as an animated unified terminal SVG heatmap.
-Features subtle, organic, randomized activity animations across contribution cells
-resembling living developer activity throughout the year.
+Features:
+- 30+ glowing contribution cells with organic randomized activity animations
+- Playful animated snake roaming across the contribution grid cells
+- Full preservation of authentic contribution counts and stats
+- Reduced-motion accessibility support
 Output: contrib-heatmap.svg (940x265)
 """
 from __future__ import annotations
@@ -19,47 +22,99 @@ X0, Y0 = 50, 56
 CELL, GAP = 12, 4
 STEP = CELL + GAP
 
-# 18 organic wandering single-cell pulses
+# 32 organic wandering single-cell pulses (30+ cells requirement)
 # (col, row, class_name, dur, delay, target_lvl)
-# Durations are non-harmonic primes / co-primes between 18s and 34s
-# Delays are well-distributed (0.8s to 11.2s) so 1-3 cells are active at a time
+# Durations are non-harmonic primes / co-primes between 15s and 33s
+# Delays are distributed between 0.5s and 10.5s
 SINGLE_CELLS = [
-    (3, 1, "p-01", 19.3, 0.8, 3),
-    (6, 4, "p-02", 23.1, 4.2, 4),
-    (9, 2, "p-03", 27.4, 8.1, 2),
-    (12, 5, "p-04", 21.7, 2.5, 4),
-    (16, 1, "p-05", 29.3, 9.4, 5),
-    (19, 6, "p-06", 24.2, 5.7, 3),
-    (22, 3, "p-07", 31.1, 1.4, 2),
-    (25, 0, "p-08", 22.8, 6.9, 4),
-    (27, 5, "p-09", 26.6, 3.1, 3),
-    (31, 2, "p-10", 33.5, 10.5, 5),
-    (34, 4, "p-11", 20.2, 1.9, 3),
-    (37, 1, "p-12", 28.8, 7.3, 4),
-    (40, 6, "p-13", 23.9, 3.8, 2),
-    (42, 3, "p-14", 30.4, 8.6, 4),
-    (45, 5, "p-15", 25.1, 4.9, 3),
-    (47, 0, "p-16", 32.7, 11.2, 4),
-    (49, 4, "p-17", 21.3, 2.1, 5),
-    (51, 2, "p-18", 27.9, 6.3, 2),
+    (1, 2, "p-01", 16.3, 0.5, 3),
+    (3, 5, "p-02", 21.1, 3.2, 4),
+    (5, 1, "p-03", 18.4, 1.8, 2),
+    (7, 4, "p-04", 24.7, 5.1, 4),
+    (9, 0, "p-05", 19.3, 0.9, 5),
+    (11, 6, "p-06", 27.1, 4.4, 3),
+    (13, 3, "p-07", 15.8, 2.1, 2),
+    (16, 2, "p-08", 22.9, 6.7, 4),
+    (18, 5, "p-09", 17.6, 1.2, 3),
+    (19, 1, "p-10", 25.4, 8.3, 5),
+    (22, 4, "p-11", 20.7, 2.8, 3),
+    (24, 0, "p-12", 28.3, 5.9, 4),
+    (26, 6, "p-13", 16.9, 0.7, 2),
+    (27, 2, "p-14", 23.5, 3.9, 4),
+    (30, 5, "p-15", 19.8, 7.1, 3),
+    (32, 1, "p-16", 26.2, 1.6, 5),
+    (34, 4, "p-17", 18.9, 4.8, 2),
+    (36, 0, "p-18", 24.1, 9.2, 4),
+    (37, 6, "p-19", 21.5, 2.4, 3),
+    (39, 3, "p-20", 17.2, 5.6, 4),
+    (41, 1, "p-21", 29.7, 0.8, 3),
+    (42, 5, "p-22", 22.1, 3.5, 5),
+    (44, 4, "p-23", 15.4, 6.2, 2),
+    (46, 0, "p-24", 27.8, 1.4, 4),
+    (47, 6, "p-25", 20.3, 4.1, 3),
+    (48, 2, "p-26", 23.9, 8.7, 4),
+    (49, 5, "p-27", 18.1, 2.6, 2),
+    (50, 1, "p-28", 26.5, 5.3, 5),
+    (51, 4, "p-29", 16.7, 1.1, 3),
+    (52, 0, "p-30", 22.4, 7.8, 4),
+    (52, 6, "p-31", 28.9, 3.7, 3),
+    (14, 0, "p-32", 19.5, 6.0, 4),
 ]
 
-# 3 occasional small clusters (2-4 nearby cells activating together with micro-delays)
+# 4 occasional small clusters (2-4 nearby cells activating together with micro-delays)
 CLUSTER_CELLS = [
-    # Cluster A (Spring sprint, week 14-15, 3 cells nearby)
-    (14, 2, "cl-a1", 38.0, 5.0, 3),
-    (14, 3, "cl-a2", 38.0, 5.3, 4),
-    (15, 2, "cl-a3", 38.0, 5.6, 3),
-    # Cluster B (Summer feature burst, week 28-29, 4 cells nearby)
-    (28, 3, "cl-b1", 44.0, 14.0, 2),
-    (28, 4, "cl-b2", 44.0, 14.3, 4),
-    (29, 3, "cl-b3", 44.0, 14.6, 5),
-    (29, 4, "cl-b4", 44.0, 14.9, 3),
-    # Cluster C (Winter release push, week 43-44, 3 cells nearby)
-    (43, 1, "cl-c1", 49.0, 22.0, 3),
-    (43, 2, "cl-c2", 49.0, 22.35, 4),
-    (44, 2, "cl-c3", 49.0, 22.7, 4),
+    # Cluster A (Autumn sprint, week 8-9, 3 cells)
+    (8, 2, "cl-a1", 32.0, 4.0, 3),
+    (8, 3, "cl-a2", 32.0, 4.25, 4),
+    (9, 3, "cl-a3", 32.0, 4.55, 3),
+    # Cluster B (Spring burst, week 20-21, 3 cells)
+    (20, 2, "cl-b1", 37.0, 11.0, 2),
+    (20, 3, "cl-b2", 37.0, 11.3, 4),
+    (21, 3, "cl-b3", 37.0, 11.6, 5),
+    # Cluster C (Summer feature push, week 33-34, 4 cells)
+    (33, 2, "cl-c1", 41.0, 18.0, 3),
+    (33, 3, "cl-c2", 41.0, 18.25, 4),
+    (34, 2, "cl-c3", 41.0, 18.55, 5),
+    (34, 3, "cl-c4", 41.0, 18.85, 3),
+    # Cluster D (Winter release, week 44-45, 3 cells)
+    (44, 2, "cl-d1", 45.0, 25.0, 3),
+    (44, 3, "cl-d2", 45.0, 25.35, 4),
+    (45, 3, "cl-d3", 45.0, 25.7, 4),
 ]
+
+def generate_snake_path() -> tuple[str, float]:
+    """Generate a Manhattan grid-aligned closed wandering path for the snake."""
+    waypoints = [
+        (4, 2), (8, 2), (8, 5), (13, 5), (13, 1), (17, 1), (17, 4),
+        (21, 4), (21, 0), (26, 0), (26, 3), (30, 3), (30, 6), (35, 6),
+        (35, 2), (39, 2), (39, 5), (44, 5), (44, 1), (48, 1), (48, 4),
+        (51, 4), (51, 6), (42, 6), (42, 0), (33, 0), (33, 4), (24, 4),
+        (24, 6), (15, 6), (15, 3), (4, 3), (4, 2)
+    ]
+    grid_points = [waypoints[0]]
+    for target in waypoints[1:]:
+        cur = grid_points[-1]
+        c, r = cur
+        tc, tr = target
+        step_c = 1 if tc > c else -1
+        while c != tc:
+            c += step_c
+            grid_points.append((c, r))
+        step_r = 1 if tr > r else -1
+        while r != tr:
+            r += step_r
+            grid_points.append((c, r))
+
+    coords = [(56 + c * 16, 62 + r * 16) for c, r in grid_points]
+    d_parts = [f"M {coords[0][0]},{coords[0][1]}"]
+    for x, y in coords[1:]:
+        d_parts.append(f"L {x},{y}")
+    d_parts.append("Z")
+    
+    total_steps = len(grid_points)
+    # Each step takes ~0.20s -> total loop ~29.4s
+    dur = round(total_steps * 0.20, 1)
+    return " ".join(d_parts), dur, 0.20
 
 def main():
     if not DATA.exists():
@@ -85,7 +140,7 @@ def main():
         style_lines = [
             '  <defs>',
             '    <style>',
-            '      /* Living GitHub Contribution Heatmap - Organic Activity Animations */',
+            '      /* Living GitHub Contribution Heatmap - 30+ Glowing Activity Cells */',
             '      @keyframes pulseLvl2 {',
             '        0% { fill: #161B22; }',
             '        2% { fill: #006D32; }',
@@ -122,6 +177,7 @@ def main():
             '      /* Respect user motion preferences */',
             '      @media (prefers-reduced-motion: reduce) {',
             '        .live-cell { animation: none !important; }',
+            '        #snake-entity { display: none !important; }',
             '      }',
             '    </style>',
             '  </defs>',
@@ -155,7 +211,7 @@ def main():
     for row, label in [(1, "Mon"), (3, "Wed"), (5, "Fri")]:
         parts.append(f'  <text x="14" y="{Y0+row*STEP+10}" fill="#8B949E" font-family="monospace" font-size="9.5">{label}</text>')
 
-    # Grid Cells
+    # Grid Cells (371 cells with 30+ glowing live-cells)
     for i, x in enumerate(days):
         col, row = i // 7, i % 7
         px = X0 + col * STEP
@@ -168,6 +224,43 @@ def main():
             parts.append(f'  <rect class="live-cell {cname}" x="{px}" y="{py}" width="{CELL}" height="{CELL}" rx="3" fill="{base_color}"><title>{x["date"]}: {x["count"]} contribution(s)</title></rect>')
         else:
             parts.append(f'  <rect x="{px}" y="{py}" width="{CELL}" height="{CELL}" rx="3" fill="{base_color}"><title>{x["date"]}: {x["count"]} contribution(s)</title></rect>')
+
+    # Animated Roaming Snake Entity
+    if not static:
+        snake_path_d, snake_dur, step_dur = generate_snake_path()
+        dt1 = f"-{step_dur * 1:.2f}s"
+        dt2 = f"-{step_dur * 2:.2f}s"
+        dt3 = f"-{step_dur * 3:.2f}s"
+        dt4 = f"-{step_dur * 4:.2f}s"
+
+        parts.append(f'''  <!-- Animated Roaming Snake -->
+  <g id="snake-entity">
+    <!-- Tail (trailing segment) -->
+    <rect x="-5" y="-5" width="10" height="10" rx="2.5" fill="#0E4429" opacity="0.85">
+      <animateMotion dur="{snake_dur}s" repeatCount="indefinite" begin="{dt4}" path="{snake_path_d}" />
+    </rect>
+    <!-- Body Segment 3 -->
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#006D32" opacity="0.9">
+      <animateMotion dur="{snake_dur}s" repeatCount="indefinite" begin="{dt3}" path="{snake_path_d}" />
+    </rect>
+    <!-- Body Segment 2 -->
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#26A641">
+      <animateMotion dur="{snake_dur}s" repeatCount="indefinite" begin="{dt2}" path="{snake_path_d}" />
+    </rect>
+    <!-- Body Segment 1 -->
+    <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#39D353">
+      <animateMotion dur="{snake_dur}s" repeatCount="indefinite" begin="{dt1}" path="{snake_path_d}" />
+    </rect>
+    <!-- Snake Head with expressive pixel eyes -->
+    <g>
+      <rect x="-6" y="-6" width="12" height="12" rx="3" fill="#69F0A0" stroke="#FFFFFF" stroke-width="0.8"/>
+      <circle cx="-2.5" cy="-2.5" r="1.3" fill="#080B10"/>
+      <circle cx="2.5" cy="-2.5" r="1.3" fill="#080B10"/>
+      <circle cx="-2.5" cy="-2.5" r="0.5" fill="#FFFFFF"/>
+      <circle cx="2.5" cy="-2.5" r="0.5" fill="#FFFFFF"/>
+      <animateMotion dur="{snake_dur}s" repeatCount="indefinite" begin="0s" path="{snake_path_d}" />
+    </g>
+  </g>''')
 
     # Legend and Summary Footer
     ly = 188
@@ -182,9 +275,9 @@ def main():
     parts.append(f'  <text x="{W-24}" y="{H-17}" text-anchor="end" fill="#8B949E" font-family="monospace" font-size="11">peak day: {stats["best_day"]["count"]} contributions</text>')
 
     svg = f'''<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Animated GitHub contribution heatmap for Zaid7829">
+<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Animated GitHub contribution heatmap with roaming snake for Zaid7829">
   <title>Zaid7829 — Contribution Heatmap</title>
-  <desc>Public contribution calendar for Zaid7829 rendered with unified terminal design</desc>
+  <desc>Public contribution calendar for Zaid7829 with 30+ organic glowing cells and roaming snake</desc>
 {chr(10).join(parts)}
 </svg>
 '''
