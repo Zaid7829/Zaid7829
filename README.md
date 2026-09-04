@@ -1,28 +1,31 @@
 <div align="center">
 
-```text
-zaid@github:~$ whoami
-```
+<!-- PROFILE IMAGE FIRST -->
+<img src="./avi-dotmatrix-static.svg" width="280" alt="Zaid portrait" />
 
-# **`Z A I D`**
-#### **Full Stack Developer · Software Engineer · Builder**
+# **Z &nbsp;A &nbsp;I &nbsp;D**
+
+### **Full Stack Developer &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Builder**
 
 <p>
-  <code>[ FRONTEND ]</code> &nbsp;
-  <code>[ BACKEND ]</code> &nbsp;
-  <code>[ DATABASES ]</code> &nbsp;
-  <code>[ CLOUD ]</code> &nbsp;
-  <code>[ AUTOMATION ]</code>
+  <a href="#-03-toolbox" title="Frontend Engineering"><img src="./icons/frontend.svg" width="18" height="18" alt="Frontend" valign="middle" />&nbsp;<sub><strong>Frontend</strong></sub></a>
+  &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+  <a href="#-03-toolbox" title="Backend &amp; Distributed APIs"><img src="./icons/backend.svg" width="18" height="18" alt="Backend" valign="middle" />&nbsp;<sub><strong>Backend</strong></sub></a>
+  &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+  <a href="#-03-toolbox" title="Databases &amp; Cache Modeling"><img src="./icons/database.svg" width="18" height="18" alt="Databases" valign="middle" />&nbsp;<sub><strong>Databases</strong></sub></a>
+  &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+  <a href="#-03-toolbox" title="Cloud Infrastructure &amp; DevOps"><img src="./icons/cloud.svg" width="18" height="18" alt="Cloud" valign="middle" />&nbsp;<sub><strong>Cloud</strong></sub></a>
+  &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+  <a href="#-03-toolbox" title="Automation &amp; CI/CD"><img src="./icons/automation.svg" width="18" height="18" alt="Automation" valign="middle" />&nbsp;<sub><strong>Automation</strong></sub></a>
 </p>
 
 <p>
-  <a href="https://github.com/Zaid7829"><strong>GitHub</strong></a> &nbsp;·&nbsp;
-  <a href="mailto:mdyusuffaiz517@gmail.com"><strong>Email</strong></a> &nbsp;·&nbsp;
-  <a href="https://github.com/Zaid7829?tab=repositories"><strong>Repositories</strong></a>
+  <a href="https://github.com/Zaid7829"><img src="./icons/github.svg" width="16" height="16" alt="GitHub" valign="middle" />&nbsp;<strong>GitHub</strong></a>
+  &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+  <a href="mailto:mdyusuffaiz517@gmail.com"><img src="./icons/email.svg" width="16" height="16" alt="Email" valign="middle" />&nbsp;<strong>Email</strong></a>
+  &nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;
+  <a href="https://github.com/Zaid7829?tab=repositories"><img src="./icons/repo.svg" width="16" height="16" alt="Repositories" valign="middle" />&nbsp;<strong>Repositories</strong></a>
 </p>
-
-<!-- DIGITAL PARTICLE AVATAR -->
-<img src="./avi-dotmatrix.svg" width="360" alt="Zaid portrait" />
 
 </div>
 
