@@ -21,19 +21,8 @@ zaid@github:~$ whoami
   <a href="#-08-selected-work"><strong>Selected Work</strong></a>
 </p>
 
-<br>
-
-<!-- EDITORIAL DUAL DISPLAY: PORTRAIT & SYSTEM SPEC -->
-<table>
-  <tr>
-    <td width="50%" align="center" valign="top">
-      <img src="./avi-dotmatrix.svg" width="100%" alt="Zaid portrait" />
-    </td>
-    <td width="50%" align="center" valign="top">
-      <img src="./info-card.svg" width="100%" alt="Zaid system specification" />
-    </td>
-  </tr>
-</table>
+<!-- DIGITAL PARTICLE AVATAR -->
+<img src="./avi-dotmatrix.svg" width="360" alt="Zaid portrait" />
 
 </div>
 
@@ -43,34 +32,11 @@ zaid@github:~$ whoami
 
 ### `~/ 01. whoami`
 
-<table>
-  <tr>
-    <td width="42%" valign="top">
+<div align="center">
+  <img src="./info-card.svg" width="760" alt="Zaid system specification card" />
+</div>
 
-```text
-IDENTITY      Zaid
-ROLE          Full Stack Developer
-LOCATION      Global / Remote
-CORE ENGINE   Architecture → Code
-              → Test → Ship
-STATUS        Active // Building
-```
-
-</td>
-<td width="58%" valign="top">
-
-```text
-[01] FRONTEND     Reactive, accessible, component-driven UI systems
-[02] BACKEND      High-throughput REST & GraphQL application services
-[03] DATABASES    Relational schemas, ACID transactions & Redis cache
-[04] CLOUD        Containerized Docker deployments & automated CI/CD
-[05] SECURITY     Defensive validation, zero-leak secrets & JWT auth
-[06] AUTOMATION   Task scripts, git hooks & developer tooling
-```
-
-</td>
-</tr>
-</table>
+<br>
 
 > *"Don't just make it work. Make it understandable, maintainable, and useful."*
 
