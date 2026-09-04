@@ -40,14 +40,17 @@ jobs:
       - name: Render system status
         run: python scripts/render_system_status.py
 
+      - name: Render hero name
+        run: python scripts/render_name_svg.py
+
       - name: Commit updated art
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- data/contributions.json contrib-heatmap.svg skill-radar.svg toolbox.svg system-status.svg; then
+          if git diff --quiet -- data/contributions.json contrib-heatmap.svg skill-radar.svg toolbox.svg system-status.svg hero-name.svg; then
             echo "No profile art changes."
             exit 0
           fi
-          git add data/contributions.json contrib-heatmap.svg skill-radar.svg toolbox.svg system-status.svg
+          git add data/contributions.json contrib-heatmap.svg skill-radar.svg toolbox.svg system-status.svg hero-name.svg
           git commit -m "chore: refresh profile art"
           git push

@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 60" width="600" height="60" role="img" aria-label="Zaid typewriter name banner">
+  <title>Z A I D</title>
+  <style>
+    .type-text {
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, monospace;
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      dominant-baseline: central;
+      text-anchor: start;
+    }
+    .cursor {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-weight: 300;
+      font-size: 32px;
+      animation: cursorBlink 0.65s step-end infinite;
+    }
+    @keyframes cursorBlink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    /* Cycle 0: Electric Cyan (#38BDF8) */
+    .cycle-0 {
+      fill: #38BDF8;
+      animation: cycleAnim0 21.0s infinite;
+    }
+    @keyframes cycleAnim0 {
+      0%, 16.66% { opacity: 1; visibility: visible; }
+      16.67%, 100% { opacity: 0; visibility: hidden; }
+    }
+    /* Cycle 1: Terminal Green (#39D353) */
+    .cycle-1 {
+      fill: #39D353;
+      animation: cycleAnim1 21.0s infinite;
+    }
+    @keyframes cycleAnim1 {
+      0%, 16.66% { opacity: 0; visibility: hidden; }
+      16.67%, 33.32% { opacity: 1; visibility: visible; }
+      33.33%, 100% { opacity: 0; visibility: hidden; }
+    }
+    /* Cycle 2: Cyberpunk Violet (#A371F7) */
+    .cycle-2 {
+      fill: #A371F7;
+      animation: cycleAnim2 21.0s infinite;
+    }
+    @keyframes cycleAnim2 {
+      0%, 33.32% { opacity: 0; visibility: hidden; }
+      33.33%, 49.99% { opacity: 1; visibility: visible; }
+      50.00%, 100% { opacity: 0; visibility: hidden; }
+    }
+    /* Cycle 3: Sunset Amber (#FF8C00) */
+    .cycle-3 {
+      fill: #FF8C00;
+      animation: cycleAnim3 21.0s infinite;
+    }
+    @keyframes cycleAnim3 {
+      0%, 49.99% { opacity: 0; visibility: hidden; }
+      50.00%, 66.66% { opacity: 1; visibility: visible; }
+      66.67%, 100% { opacity: 0; visibility: hidden; }
+    }
+    /* Cycle 4: Neon Rose (#F43F5E) */
+    .cycle-4 {
+      fill: #F43F5E;
+      animation: cycleAnim4 21.0s infinite;
+    }
+    @keyframes cycleAnim4 {
+      0%, 66.66% { opacity: 0; visibility: hidden; }
+      66.67%, 83.32% { opacity: 1; visibility: visible; }
+      83.33%, 100% { opacity: 0; visibility: hidden; }
+    }
+    /* Cycle 5: Platinum White (#F0F6FC) */
+    .cycle-5 {
+      fill: #F0F6FC;
+      animation: cycleAnim5 21.0s infinite;
+    }
+    @keyframes cycleAnim5 {
+      0%, 83.32% { opacity: 0; visibility: hidden; }
+      83.33%, 100% { opacity: 1; visibility: visible; }
+    }
+    .frame-0 {
+      animation: frameAnim0 3.5s infinite;
+    }
+    @keyframes frameAnim0 {
+      0.00%, 9.99% { opacity: 1; visibility: visible; }
+      10.00%, 88.49% { opacity: 0; visibility: hidden; }
+      88.50%, 99.99% { opacity: 1; visibility: visible; }
+    }
+    .frame-1 {
+      animation: frameAnim1 3.5s infinite;
+    }
+    @keyframes frameAnim1 {
+      0.00%, 9.99% { opacity: 0; visibility: hidden; }
+      10.00%, 19.99% { opacity: 1; visibility: visible; }
+      20.00%, 82.79% { opacity: 0; visibility: hidden; }
+      82.80%, 88.49% { opacity: 1; visibility: visible; }
+      88.50%, 100% { opacity: 0; visibility: hidden; }
+    }
+    .frame-2 {
+      animation: frameAnim2 3.5s infinite;
+    }
+    @keyframes frameAnim2 {
+      0.00%, 19.99% { opacity: 0; visibility: hidden; }
+      20.00%, 29.99% { opacity: 1; visibility: visible; }
+      30.00%, 77.09% { opacity: 0; visibility: hidden; }
+      77.10%, 82.79% { opacity: 1; visibility: visible; }
+      82.80%, 100% { opacity: 0; visibility: hidden; }
+    }
+    .frame-3 {
+      animation: frameAnim3 3.5s infinite;
+    }
+    @keyframes frameAnim3 {
+      0.00%, 29.99% { opacity: 0; visibility: hidden; }
+      30.00%, 39.99% { opacity: 1; visibility: visible; }
+      40.00%, 71.39% { opacity: 0; visibility: hidden; }
+      71.40%, 77.09% { opacity: 1; visibility: visible; }
+      77.10%, 100% { opacity: 0; visibility: hidden; }
+    }
+    .frame-4 {
+      animation: frameAnim4 3.5s infinite;
+    }
+    @keyframes frameAnim4 {
+      0.00%, 39.99% { opacity: 0; visibility: hidden; }
+      40.00%, 71.39% { opacity: 1; visibility: visible; }
+      71.40%, 100% { opacity: 0; visibility: hidden; }
+    }
+  </style>
+  <!-- Cycle 0: Electric Cyan -->
+  <g class="cycle-0">
+    <g class="frame-0">
+      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+    </g>
+    <g class="frame-1">
+      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-2">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-3">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-4">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+  </g>
+  <!-- Cycle 1: Terminal Green -->
+  <g class="cycle-1">
+    <g class="frame-0">
+      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+    </g>
+    <g class="frame-1">
+      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-2">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-3">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-4">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+  </g>
+  <!-- Cycle 2: Cyberpunk Violet -->
+  <g class="cycle-2">
+    <g class="frame-0">
+      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+    </g>
+    <g class="frame-1">
+      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-2">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-3">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-4">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+  </g>
+  <!-- Cycle 3: Sunset Amber -->
+  <g class="cycle-3">
+    <g class="frame-0">
+      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+    </g>
+    <g class="frame-1">
+      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-2">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-3">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-4">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+  </g>
+  <!-- Cycle 4: Neon Rose -->
+  <g class="cycle-4">
+    <g class="frame-0">
+      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+    </g>
+    <g class="frame-1">
+      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-2">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-3">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-4">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+  </g>
+  <!-- Cycle 5: Platinum White -->
+  <g class="cycle-5">
+    <g class="frame-0">
+      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+    </g>
+    <g class="frame-1">
+      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-2">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-3">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+    <g class="frame-4">
+      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+    </g>
+  </g>
+</svg>

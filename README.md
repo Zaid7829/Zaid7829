@@ -3,7 +3,7 @@
 <!-- PROFILE IMAGE FIRST -->
 <img src="./avi-dotmatrix-static.svg" width="280" alt="Zaid portrait" />
 
-# **Z &nbsp;A &nbsp;I &nbsp;D**
+<img src="./hero-name.svg" width="440" alt="Z A I D" />
 
 ### **Full Stack Developer &nbsp;·&nbsp; Software Engineer &nbsp;·&nbsp; Builder**
 
