@@ -1,0 +1,15 @@
+# Local Python environment
+.venv/
+__pycache__/
+*.pyc
+
+# Private/local portrait inputs and intermediate files
+source-photo.*
+data/source-prepped.png
+*.jpg
+*.jpeg
+*.png
+
+# Local previews
+*-preview.svg
+*-preview.png

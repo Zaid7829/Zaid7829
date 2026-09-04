@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="760" viewBox="0 0 760 760" role="img" aria-label="Terminal developer information card for Zaid7829">
+  <title>Zaid7829 — Developer System Card</title>
+  <desc>Neofetch developer information card detailing full stack role, skills, and status</desc>
+  <defs>
+    <radialGradient id="card-bg" cx="50%" cy="40%" r="75%">
+      <stop offset="0%" stop-color="#11151c"/>
+      <stop offset="55%" stop-color="#0a0d12"/>
+      <stop offset="100%" stop-color="#050608"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Terminal Outer Frame -->
+  <rect width="760" height="760" rx="18" fill="url(#card-bg)"/>
+  <rect x="1" y="1" width="758" height="758" rx="17" fill="none" stroke="#30363D" stroke-width="1.2"/>
+  
+  <!-- Top Terminal Bar -->
+  <rect x="1" y="1" width="758" height="42" rx="17" fill="#0D1117"/>
+  <line x1="1" y1="43" x2="759" y2="43" stroke="#21262D" stroke-width="1"/>
+  <circle cx="24" cy="22" r="5" fill="#FF5F56"/>
+  <circle cx="40" cy="22" r="5" fill="#FFBD2E"/>
+  <circle cx="56" cy="22" r="5" fill="#27C93F"/>
+  <text x="78" y="26" fill="#8B949E" font-family="monospace" font-size="12">zaid@github:~$ ./system --profile --specs</text>
+  <text x="734" y="26" text-anchor="end" fill="#39D353" font-family="monospace" font-size="11">● ONLINE [DEV-OS]</text>
+  
+  <!-- Terminal Content Header -->
+  <text x="36" y="80" fill="#FF8C00" font-family="monospace" font-size="22" font-weight="700">ZAID7829</text>
+  <text x="36" y="104" fill="#8B949E" font-family="monospace" font-size="12">Building complete software from interface to deployment.</text>
+  <line x1="36" y1="122" x2="724" y2="122" stroke="#21262D" stroke-width="1"/>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.15s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.15s" fill="freeze"/>
+    <text x="36" y="158" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">USER     </text>
+    <text x="122" y="158" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="158" fill="#E6EDF3" font-family="monospace" font-size="11">Zaid7829</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.22s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.22s" fill="freeze"/>
+    <text x="36" y="197" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">ROLE     </text>
+    <text x="122" y="197" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="197" fill="#FF8C00" font-family="monospace" font-size="11">Full Stack Developer</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.29s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.29s" fill="freeze"/>
+    <text x="36" y="236" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">FOCUS    </text>
+    <text x="122" y="236" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="236" fill="#E6EDF3" font-family="monospace" font-size="11">Full-Stack Web · API Design · Architecture</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.36s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.36s" fill="freeze"/>
+    <text x="36" y="275" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">LANGS    </text>
+    <text x="122" y="275" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="275" fill="#C9D1D9" font-family="monospace" font-size="11">JavaScript · TypeScript · Python · Java · C · C++</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.43s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.43s" fill="freeze"/>
+    <text x="36" y="314" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">FRONTEND </text>
+    <text x="122" y="314" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="314" fill="#C9D1D9" font-family="monospace" font-size="11">React · Next.js · Vue · Angular · Svelte</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.50s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.50s" fill="freeze"/>
+    <text x="36" y="353" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">BACKEND  </text>
+    <text x="122" y="353" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="353" fill="#C9D1D9" font-family="monospace" font-size="11">Node.js · Express · NestJS · FastAPI · Django</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.57s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.57s" fill="freeze"/>
+    <text x="36" y="392" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">APIS     </text>
+    <text x="122" y="392" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="392" fill="#C9D1D9" font-family="monospace" font-size="11">REST · GraphQL · WebSockets · Auth / JWT</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.64s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.64s" fill="freeze"/>
+    <text x="36" y="431" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">DATABASE </text>
+    <text x="122" y="431" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="431" fill="#C9D1D9" font-family="monospace" font-size="11">PostgreSQL · MySQL · MongoDB · Redis · SQLite</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.71s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.71s" fill="freeze"/>
+    <text x="36" y="470" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">CLOUD/OPS</text>
+    <text x="122" y="470" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="470" fill="#C9D1D9" font-family="monospace" font-size="11">AWS · Azure · Google Cloud · Docker · Kubernetes</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.78s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.78s" fill="freeze"/>
+    <text x="36" y="509" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">TESTING  </text>
+    <text x="122" y="509" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="509" fill="#C9D1D9" font-family="monospace" font-size="11">Jest · Vitest · Pytest · Playwright · Cypress</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.85s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.85s" fill="freeze"/>
+    <text x="36" y="548" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">AI / ML  </text>
+    <text x="122" y="548" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="548" fill="#C9D1D9" font-family="monospace" font-size="11">OpenAI · LLM Applications · LangChain · Hugging Face</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.92s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.92s" fill="freeze"/>
+    <text x="36" y="587" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">KERNEL   </text>
+    <text x="122" y="587" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="587" fill="#8B949E" font-family="monospace" font-size="11">x86_64 Full Stack Dev OS // kernel 6.x</text>
+  </g>
+  <g opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.4s" begin="0.99s" fill="freeze"/>
+    <animateTransform attributeName="transform" type="translate" from="-6 0" to="0 0" dur="0.4s" begin="0.99s" fill="freeze"/>
+    <text x="36" y="626" fill="#FF8C00" font-family="monospace" font-size="11" font-weight="700">STATUS   </text>
+    <text x="122" y="626" fill="#30363D" font-family="monospace" font-size="11">│</text>
+    <text x="140" y="626" fill="#39D353" font-family="monospace" font-size="11">BUILDING · LEARNING · SHIPPING</text>
+  </g>
+  <!-- Terminal Footer Specs -->
+  <line x1="36" y1="708" x2="724" y2="708" stroke="#21262D" stroke-width="1"/>
+  <circle cx="44" cy="734" r="4" fill="#FF8C00"/>
+  <text x="56" y="737" fill="#8B949E" font-family="monospace" font-size="11">PHILOSOPHY: Clean Architecture · Performance · Security · DX</text>
+  <text x="724" y="737" text-anchor="end" fill="#6E7681" font-family="monospace" font-size="11">UPTIME: CONTINUOUS // 2026</text>
+</svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 300" width="100%" height="300">
+  <defs>
+    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#080B10" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="line-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#FF8C00" stop-opacity="0.6" />
+    </linearGradient>
+    <style>
+      .const-line { stroke: #30363D; stroke-width: 1; stroke-dasharray: 4, 4; }
+      .const-core-line { stroke: url(#line-grad); stroke-width: 1.5; opacity: 0.7; }
+      .node-box { fill: #111820; stroke: #30363D; stroke-width: 1; rx: 6px; }
+      .node-text { fill: #E6EDF3; font-family: ui-monospace, SFMono-Regular, monospace; font-size: 11px; font-weight: 600; text-anchor: middle; }
+      .center-title { fill: #FFFFFF; font-family: ui-monospace, monospace; font-size: 14px; font-weight: 700; letter-spacing: 2px; }
+      .center-sub { fill: #58A6FF; font-family: ui-monospace, monospace; font-size: 9px; letter-spacing: 1.5px; }
+      @keyframes pulse {
+        0%, 100% { r: 3px; opacity: 0.4; }
+        50% { r: 5px; opacity: 0.9; }
+      }
+      .star-dot { fill: #79C0FF; animation: pulse 3s infinite ease-in-out; }
+    </style>
+  </defs>
+  <rect width="940" height="300" fill="#080B10" rx="8" stroke="#30363D" stroke-width="1" />
+  <ellipse cx="470.0" cy="150.0" rx="380" ry="120" fill="url(#center-glow)" />
+  <ellipse cx="470.0" cy="150.0" rx="360" ry="110" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="3, 5" />
+  <ellipse cx="470.0" cy="150.0" rx="240" ry="75" fill="none" stroke="#21262D" stroke-width="1" stroke-dasharray="2, 4" />
+  <line x1="470.0" y1="150.0" x2="834.0" y2="150.0" class="const-core-line" />
+  <line x1="834.0" y1="150.0" x2="672.6" y2="187.8" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="672.6" y2="187.8" class="const-core-line" />
+  <line x1="672.6" y1="187.8" x2="691.0" y2="273.7" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="691.0" y2="273.7" class="const-core-line" />
+  <line x1="691.0" y1="273.7" x2="372.2" y2="236.8" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="372.2" y2="236.8" class="const-core-line" />
+  <line x1="372.2" y1="236.8" x2="151.3" y2="236.4" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="151.3" y2="236.4" class="const-core-line" />
+  <line x1="151.3" y1="236.4" x2="211.0" y2="157.3" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="211.0" y2="157.3" class="const-core-line" />
+  <line x1="211.0" y1="157.3" x2="98.5" y2="80.7" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="98.5" y2="80.7" class="const-core-line" />
+  <line x1="98.5" y1="80.7" x2="385.5" y2="75.0" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="385.5" y2="75.0" class="const-core-line" />
+  <line x1="385.5" y1="75.0" x2="577.7" y2="20.2" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="577.7" y2="20.2" class="const-core-line" />
+  <line x1="577.7" y1="20.2" x2="693.6" y2="99.4" class="const-line" />
+  <line x1="470.0" y1="150.0" x2="693.6" y2="99.4" class="const-core-line" />
+  <line x1="693.6" y1="99.4" x2="834.0" y2="150.0" class="const-line" />
+  <g transform="translate(360.0, 124.0)">
+    <rect width="220" height="52" fill="#161B22" stroke="#58A6FF" stroke-width="1.5" rx="8" />
+    <circle cx="18" cy="26.0" r="5" fill="#39D353" />
+    <text x="116.0" y="23" text-anchor="middle" class="center-title">ZAID // SYSTEM CORE</text>
+    <text x="116.0" y="40" text-anchor="middle" class="center-sub">FULL-STACK ENGINE · ONLINE</text>
+  </g>
+  <g transform="translate(788.0, 136.0)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#61DAFB" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#61DAFB">⚛️</text>
+    <text x="52" y="18" class="node-text">React</text>
+  </g>
+  <g transform="translate(626.6, 173.8)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#3178C6" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#3178C6">TS</text>
+    <text x="52" y="18" class="node-text">TypeScript</text>
+  </g>
+  <g transform="translate(645.0, 259.7)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#FFFFFF" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#FFFFFF">▲</text>
+    <text x="52" y="18" class="node-text">Next.js</text>
+  </g>
+  <g transform="translate(326.2, 222.8)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#339933" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#339933">⬢</text>
+    <text x="52" y="18" class="node-text">Node.js</text>
+  </g>
+  <g transform="translate(105.3, 222.4)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#3776AB" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#3776AB">🐍</text>
+    <text x="52" y="18" class="node-text">Python</text>
+  </g>
+  <g transform="translate(165.0, 143.3)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#4169E1" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#4169E1">🐘</text>
+    <text x="52" y="18" class="node-text">PostgreSQL</text>
+  </g>
+  <g transform="translate(52.5, 66.7)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#2496ED" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#2496ED">🐳</text>
+    <text x="52" y="18" class="node-text">Docker</text>
+  </g>
+  <g transform="translate(339.5, 61.0)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#DC382D" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#DC382D">⚡</text>
+    <text x="52" y="18" class="node-text">Redis</text>
+  </g>
+  <g transform="translate(531.7, 6.2)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#47A248" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#47A248">🍃</text>
+    <text x="52" y="18" class="node-text">MongoDB</text>
+  </g>
+  <g transform="translate(647.6, 85.4)">
+    <rect width="92" height="28" class="node-box" />
+    <rect width="3" height="28" fill="#F05032" rx="1" />
+    <text x="14" y="18" font-size="11" fill="#F05032">🐙</text>
+    <text x="52" y="18" class="node-text">Git / GitHub</text>
+  </g>
+</svg>

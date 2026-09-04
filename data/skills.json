@@ -1,0 +1,48 @@
+{
+  "_disclaimer": "Self-assessed development focus and technology familiarity — not an objective proficiency score.",
+  "radars": {
+    "full_stack": {
+      "title": "Full Stack Development Focus",
+      "description": "Relative focus and time allocation across full-stack layers",
+      "accent": "#FF8C00",
+      "skills": {
+        "Frontend": 82,
+        "Backend": 84,
+        "APIs": 86,
+        "Databases": 74,
+        "Cloud / DevOps": 68,
+        "Testing": 70,
+        "Architecture": 78,
+        "Security": 64
+      }
+    },
+    "language_mix": {
+      "title": "Core Languages & Systems",
+      "description": "Familiarity and usage frequency across core languages",
+      "accent": "#58A6FF",
+      "skills": {
+        "TypeScript": 85,
+        "JavaScript": 88,
+        "Python": 82,
+        "SQL": 76,
+        "Java": 70,
+        "C / C++": 62,
+        "Bash": 68
+      }
+    },
+    "engineering": {
+      "title": "Engineering Practices",
+      "description": "Methodology, software quality, and workflow priorities",
+      "accent": "#39D353",
+      "skills": {
+        "Architecture": 80,
+        "Performance": 72,
+        "Security": 68,
+        "Automation": 82,
+        "Testing": 74,
+        "Clean Code": 86,
+        "DX & Tooling": 78
+      }
+    }
+  }
+}

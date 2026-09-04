@@ -1,0 +1,6 @@
+# Local-only portrait generation
+Pillow
+numpy
+opencv-python
+rembg
+onnxruntime

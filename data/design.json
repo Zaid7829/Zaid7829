@@ -1,0 +1,60 @@
+{
+  "system": {
+    "name": "Zaid7829 Developer OS",
+    "version": "2.0.0",
+    "codename": "terminal-core"
+  },
+  "colors": {
+    "background_primary": "#080B10",
+    "background_secondary": "#0D1117",
+    "background_panel": "#111820",
+    "background_card": "#0A0E14",
+    "border_primary": "#30363D",
+    "border_subtle": "#21262D",
+    "border_divider": "#1F242C",
+    "text_primary": "#E6EDF3",
+    "text_secondary": "#8B949E",
+    "text_muted": "#6E7681",
+    "accent_orange": "#FF8C00",
+    "accent_amber": "#FFAD33",
+    "accent_gold": "#FFD166",
+    "highlight_cream": "#FFE7A3",
+    "activity_green": "#39D353",
+    "activity_green_bright": "#69F0A0",
+    "link_blue": "#58A6FF",
+    "link_blue_bright": "#79C0FF",
+    "window_red": "#FF5F56",
+    "window_amber": "#FFBD2E",
+    "window_green": "#27C93F"
+  },
+  "typography": {
+    "font_family": "monospace",
+    "font_stack": "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace",
+    "font_sizes": {
+      "xs": "9px",
+      "sm": "10.5px",
+      "base": "11.5px",
+      "md": "13px",
+      "lg": "16px",
+      "xl": "20px"
+    }
+  },
+  "geometry": {
+    "border_radius_outer": "16px",
+    "border_radius_panel": "10px",
+    "border_radius_pill": "4px",
+    "border_width": "1.2px",
+    "header_height": "40px"
+  },
+  "motion": {
+    "timing_function": "cubic-bezier(0.16, 1, 0.3, 1)",
+    "delays": {
+      "background": "0.0s",
+      "header": "0.15s",
+      "primary_content": "0.35s",
+      "secondary_content": "0.75s",
+      "details": "1.15s"
+    },
+    "behavior": "play-once-and-freeze"
+  }
+}

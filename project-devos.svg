@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 240" width="100%" height="240">
+  <defs>
+    <style>
+      .window-bg { fill: #0D1117; stroke: #30363D; stroke-width: 1; rx: 8px; }
+      .title-bar { fill: #161B22; }
+      .title-text { fill: #8B949E; font-family: ui-monospace, monospace; font-size: 11px; }
+      .code-line { font-family: ui-monospace, monospace; font-size: 11px; }
+      .kw { fill: #FF7B72; }
+      .fn { fill: #D2A8FF; }
+      .str { fill: #A5D6FF; }
+      .comment { fill: #8B949E; }
+      .accent-box { fill: #111820; stroke: #58A6FF; stroke-width: 1; rx: 6px; }
+    </style>
+  </defs>
+
+  <rect width="540" height="240" class="window-bg" />
+  <rect width="540" height="28" class="title-bar" rx="8" />
+  <circle cx="16" cy="14" r="4" fill="#FF5F56" />
+  <circle cx="28" cy="14" r="4" fill="#FFBD2E" />
+  <circle cx="40" cy="14" r="4" fill="#27C93F" />
+  <text x="60" y="18" class="title-text">engine.py — Zaid7829/Zaid7829 [Active Profile OS]</text>
+
+  <!-- Code Snippet Area -->
+  <g transform="translate(20, 48)">
+    <text y="14" class="code-line"><tspan class="kw">class</tspan> <tspan class="fn">DeveloperOS</tspan>:</text>
+    <text y="34" class="code-line">  <tspan class="kw">def</tspan> <tspan class="fn">build_runtime</tspan>(self):</text>
+    <text y="54" class="code-line">    self.stack = [<tspan class="str">"React"</tspan>, <tspan class="str">"TypeScript"</tspan>, <tspan class="str">"FastAPI"</tspan>, <tspan class="str">"Docker"</tspan>]</text>
+    <text y="74" class="code-line">    self.pipeline.deploy(zero_downtime=<tspan class="kw">True</tspan>)</text>
+    <text y="94" class="code-line">    <tspan class="comment"># Telemetry: 100% automated vector SVG builds</tspan></text>
+  </g>
+
+  <!-- Right Visual Widget: Mini Dot Matrix -->
+  <g transform="translate(340, 45)">
+    <rect width="180" height="175" class="accent-box" />
+    <text x="90" y="24" fill="#58A6FF" font-family="ui-monospace, monospace" font-size="10px" text-anchor="middle" font-weight="bold">SYSTEM TELEMETRY</text>
+    <circle cx="90" cy="75" r="32" fill="none" stroke="#39D353" stroke-width="3" stroke-dasharray="140, 20" />
+    <text x="90" y="80" fill="#E6EDF3" font-family="ui-monospace, monospace" font-size="12px" text-anchor="middle" font-weight="bold">HEALTH</text>
+    <text x="90" y="130" fill="#8B949E" font-family="ui-monospace, monospace" font-size="10px" text-anchor="middle">UPTIME: 99.99%</text>
+    <text x="90" y="148" fill="#39D353" font-family="ui-monospace, monospace" font-size="10px" text-anchor="middle">ACTIVE CRON SYNC</text>
+  </g>
+</svg>

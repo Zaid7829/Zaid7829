@@ -1,0 +1,25 @@
+{
+  "username": "Zaid7829",
+  "display_name": "Zaid",
+  "role": "Full Stack Developer",
+  "tagline": "Building complete software from interface to deployment.",
+  "system": "x86_64 Full Stack Dev OS // kernel 6.x",
+  "focus": [
+    "Full-stack web applications",
+    "API design & system architecture",
+    "Responsive UI / UX engineering",
+    "Automation, CI/CD & developer tooling"
+  ],
+  "languages": ["JavaScript", "TypeScript", "Python", "Java", "C", "C++", "Go", "Rust", "PHP", "SQL", "Bash"],
+  "frontend": ["React", "Next.js", "Vue", "Angular", "Svelte", "Tailwind CSS", "Redux", "Vite"],
+  "backend": ["Node.js", "Express", "NestJS", "FastAPI", "Django", "Flask", "Spring Boot", ".NET"],
+  "apis": ["REST", "GraphQL", "WebSockets", "Auth / JWT"],
+  "data": ["PostgreSQL", "MySQL", "MongoDB", "Redis", "SQLite", "Prisma", "Drizzle", "SQLAlchemy"],
+  "cloud": ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Vercel", "Linux"],
+  "testing": ["Jest", "Vitest", "Pytest", "Playwright", "Cypress", "Testing Library"],
+  "ai": ["OpenAI", "LLM Applications", "LangChain", "Hugging Face", "scikit-learn", "PyTorch", "TensorFlow"],
+  "principles": ["User first", "Simplicity", "Readable code", "Security", "Performance", "Clean architecture"],
+  "currently": "BUILDING · LEARNING · SHIPPING",
+  "email": "mdyusuffaiz517@gmail.com",
+  "status_message": "Turning ideas into reliable, maintainable software people actually want to use."
+}

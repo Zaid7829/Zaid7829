@@ -1,0 +1,53 @@
+name: Update profile art
+
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  heatmap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Fetch contributions
+        run: python scripts/fetch_contributions.py
+        env:
+          GITHUB_USERNAME: Zaid7829
+
+      - name: Render heatmap
+        run: python scripts/render_heatmap_svg.py
+
+      - name: Render skill radar
+        run: python scripts/render_skill_radar.py
+
+      - name: Render toolbox
+        run: python scripts/render_toolbox_svg.py
+
+      - name: Render system status
+        run: python scripts/render_system_status.py
+
+      - name: Commit updated art
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- data/contributions.json contrib-heatmap.svg skill-radar.svg toolbox.svg system-status.svg; then
+            echo "No profile art changes."
+            exit 0
+          fi
+          git add data/contributions.json contrib-heatmap.svg skill-radar.svg toolbox.svg system-status.svg
+          git commit -m "chore: refresh profile art"
+          git push

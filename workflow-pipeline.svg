@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 160" width="100%" height="160">
+  <defs>
+    <style>
+      .bg { fill: #080B10; stroke: #30363D; stroke-width: 1; rx: 8px; }
+      .pipe-line { stroke: #30363D; stroke-width: 2; }
+      .flow-pulse { stroke: #58A6FF; stroke-width: 2; stroke-dasharray: 6, 8; animation: flow 15s linear infinite; }
+      .card { fill: #111820; stroke: #30363D; stroke-width: 1; rx: 8px; }
+      .card-num { fill: #8B949E; font-family: ui-monospace, monospace; font-size: 9px; font-weight: bold; }
+      .card-title { fill: #E6EDF3; font-family: ui-monospace, monospace; font-size: 10px; font-weight: bold; text-anchor: middle; }
+      @keyframes flow {
+        to { stroke-dashoffset: -500; }
+      }
+    </style>
+  </defs>
+  <rect width="940" height="160" class="bg" />
+  <text x="24" y="24" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11px">~/ 09. developer-workflow // CONTINUOUS DELIVERY PIPELINE</text>
+  <text x="916" y="24" fill="#39D353" font-family="ui-monospace, monospace" font-size="11px" text-anchor="end">AUTOMATED CI/CD ●</text>
+  <line x1="35" y1="90.0" x2="905" y2="90.0" class="pipe-line" />
+  <line x1="35" y1="90.0" x2="905" y2="90.0" class="flow-pulse" />
+  <g transform="translate(-11.0, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#FFD166" rx="1" />
+    <text x="10" y="18" class="card-num">01</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">💡</text>
+    <text x="46.0" y="74" class="card-title">IDEATE</text>
+  </g>
+  <g transform="translate(113.3, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#58A6FF" rx="1" />
+    <text x="10" y="18" class="card-num">02</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">🎨</text>
+    <text x="46.0" y="74" class="card-title">DESIGN</text>
+  </g>
+  <g transform="translate(237.6, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#79C0FF" rx="1" />
+    <text x="10" y="18" class="card-num">03</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">💻</text>
+    <text x="46.0" y="74" class="card-title">CODE</text>
+  </g>
+  <g transform="translate(361.9, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#39D353" rx="1" />
+    <text x="10" y="18" class="card-num">04</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">🧪</text>
+    <text x="46.0" y="74" class="card-title">TEST</text>
+  </g>
+  <g transform="translate(486.1, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#A371F7" rx="1" />
+    <text x="10" y="18" class="card-num">05</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">🔍</text>
+    <text x="46.0" y="74" class="card-title">REVIEW</text>
+  </g>
+  <g transform="translate(610.4, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#FF8C00" rx="1" />
+    <text x="10" y="18" class="card-num">06</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">🚀</text>
+    <text x="46.0" y="74" class="card-title">DEPLOY</text>
+  </g>
+  <g transform="translate(734.7, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#2EA043" rx="1" />
+    <text x="10" y="18" class="card-num">07</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">📊</text>
+    <text x="46.0" y="74" class="card-title">MONITOR</text>
+  </g>
+  <g transform="translate(859.0, 45.0)">
+    <rect width="92" height="90" class="card" />
+    <rect width="92" height="3" fill="#58A6FF" rx="1" />
+    <text x="10" y="18" class="card-num">08</text>
+    <text x="46.0" y="48" font-size="22" text-anchor="middle">🔄</text>
+    <text x="46.0" y="74" class="card-title">REFINE</text>
+  </g>
+</svg>
