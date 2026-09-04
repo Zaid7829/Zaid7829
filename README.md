@@ -97,34 +97,72 @@ zaid@github:~$ ./connect
 
 <div align="center">
 
-<table width="100%">
-  <tr>
-    <td width="33.3%" align="center" valign="middle">
-      <code>GITHUB</code><br>
-      <strong>@Zaid7829</strong><br><br>
-      <a href="https://github.com/Zaid7829"><strong>github.com/Zaid7829 →</strong></a>
-    </td>
-    <td width="33.3%" align="center" valign="middle">
-      <code>EMAIL</code><br>
-      <strong>mdyusuffaiz517@gmail.com</strong><br><br>
-      <a href="mailto:mdyusuffaiz517@gmail.com"><strong>Send Message →</strong></a>
-    </td>
-    <td width="33.3%" align="center" valign="middle">
-      <code>REPOSITORY</code><br>
-      <strong>Zaid7829/Zaid7829</strong><br><br>
-      <a href="https://github.com/Zaid7829/Zaid7829"><strong>View Profile Source →</strong></a>
-    </td>
-  </tr>
+<table width="760">
+  <tbody>
+    <tr>
+      <td width="44" align="center" valign="middle">
+        <a href="https://github.com/Zaid7829" title="GitHub: @Zaid7829"><img src="./icons/github.svg" width="22" height="22" alt="GitHub" valign="middle" /></a>
+      </td>
+      <td width="130" valign="middle">
+        <a href="https://github.com/Zaid7829"><strong>GitHub</strong></a>
+      </td>
+      <td valign="middle">
+        <a href="https://github.com/Zaid7829"><code>@Zaid7829</code></a>
+      </td>
+      <td width="40" align="right" valign="middle">
+        <a href="https://github.com/Zaid7829"><strong>→</strong></a>
+      </td>
+    </tr>
+    <tr>
+      <td width="44" align="center" valign="middle">
+        <a href="mailto:mdyusuffaiz517@gmail.com" title="Email: mdyusuffaiz517@gmail.com"><img src="./icons/email.svg" width="22" height="22" alt="Email" valign="middle" /></a>
+      </td>
+      <td width="130" valign="middle">
+        <a href="mailto:mdyusuffaiz517@gmail.com"><strong>Email</strong></a>
+      </td>
+      <td valign="middle">
+        <a href="mailto:mdyusuffaiz517@gmail.com"><code>mdyusuffaiz517@gmail.com</code></a>
+      </td>
+      <td width="40" align="right" valign="middle">
+        <a href="mailto:mdyusuffaiz517@gmail.com"><strong>→</strong></a>
+      </td>
+    </tr>
+    <tr>
+      <td width="44" align="center" valign="middle">
+        <a href="https://github.com/Zaid7829/Zaid7829" title="Repository: Zaid7829/Zaid7829"><img src="./icons/repo.svg" width="22" height="22" alt="Repository" valign="middle" /></a>
+      </td>
+      <td width="130" valign="middle">
+        <a href="https://github.com/Zaid7829/Zaid7829"><strong>Repository</strong></a>
+      </td>
+      <td valign="middle">
+        <a href="https://github.com/Zaid7829/Zaid7829"><code>Zaid7829/Zaid7829</code></a>
+      </td>
+      <td width="40" align="right" valign="middle">
+        <a href="https://github.com/Zaid7829/Zaid7829"><strong>→</strong></a>
+      </td>
+    </tr>
+  </tbody>
 </table>
 
 <br>
 
 #### **READY TO BUILD SOMETHING USEFUL?**
 
-<p>
-  <a href="mailto:mdyusuffaiz517@gmail.com"><strong>[ LET'S TALK → ]</strong></a> &nbsp;|&nbsp;
-  <a href="https://github.com/Zaid7829"><strong>[ EXPLORE REPOSITORIES → ]</strong></a>
-</p>
+<br>
+
+<table width="420" align="center">
+  <tbody>
+    <tr>
+      <td align="center" valign="middle">
+        <br>
+        <code>$ ./start-a-conversation</code>
+        <br><br>
+        <a href="mailto:mdyusuffaiz517@gmail.com"><strong><code>[ LET'S TALK → ]</code></strong></a>
+        <br><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 </div>
 
@@ -134,12 +172,8 @@ zaid@github:~$ ./connect
 
 <div align="center">
 
-```text
-zaid@github:~$ exit
-
-[PROCESS COMPLETED]
-```
-
-**`© Zaid · Developer Operating System · 2026`**
+<img src="./terminal-footer.svg" width="760" alt="Terminal Session Closed" />
 
 </div>
+
+

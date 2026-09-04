@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="170" viewBox="0 0 760 170" role="img" aria-label="Terminal Session Completed">
+  <title>zaid@github:~$ exit</title>
+  <desc>Terminal session closed: Build something useful. Learn something new. Ship something better.</desc>
+  <style>
+    .mono { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace; }
+    .subtle-pulse {
+      animation: statusPulse 4s ease-in-out infinite;
+    }
+    @keyframes statusPulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 0.9; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .subtle-pulse { animation: none; opacity: 0.7; }
+    }
+  </style>
+  <rect width="760" height="170" rx="6" fill="#0D1117" stroke="#30363D" stroke-width="1"/>
+  <path d="M 0 6 A 6 6 0 0 1 6 0 L 754 0 A 6 6 0 0 1 760 6 L 760 34 L 0 34 Z" fill="#161B22" />
+  <line x1="0" y1="34" x2="760" y2="34" stroke="#30363D" stroke-width="1"/>
+  <circle cx="18" cy="17" r="4.5" fill="#484F58" />
+  <circle cx="32" cy="17" r="4.5" fill="#484F58" />
+  <circle cx="46" cy="17" r="4.5" fill="#484F58" />
+  <text x="64" y="21" class="mono" fill="#8B949E" font-size="12">zaid@github:~$ exit</text>
+  <g class="subtle-pulse">
+    <text x="742" y="21" text-anchor="end" class="mono" fill="#8B949E" font-size="11">● SESSION CLOSED</text>
+  </g>
+  <text x="24" y="60" class="mono" fill="#58A6FF" font-size="13" font-weight="600">[ PROCESS COMPLETED ]</text>
+  <text x="24" y="86" class="mono" fill="#C9D1D9" font-size="12">Build something useful.</text>
+  <text x="24" y="106" class="mono" fill="#C9D1D9" font-size="12">Learn something new.</text>
+  <text x="24" y="126" class="mono" fill="#C9D1D9" font-size="12">Ship something better.</text>
+  <line x1="24" y1="142" x2="736" y2="142" stroke="#21262D" stroke-width="1"/>
+  <text x="24" y="157" class="mono" fill="#6E7681" font-size="11">© Zaid · Developer Operating System · 2026</text>
+  <text x="736" y="157" text-anchor="end" class="mono" fill="#484F58" font-size="11">DEV_OS v2.6 // TTY1</text>
+</svg>

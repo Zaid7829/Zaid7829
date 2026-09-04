@@ -33,7 +33,8 @@ svg_files = [
     "workflow-pipeline.svg",
     "project-devos.svg",
     "project-staging.svg",
-    "hero-name.svg"
+    "hero-name.svg",
+    "terminal-footer.svg"
 ]
 for sf in svg_files:
     p = Path(sf)

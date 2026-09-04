@@ -80,8 +80,8 @@ def render_markdown_html(md_text: str) -> str:
       color: #3fb950;
     }}
     .markdown-body table {{
-      display: table !important;
-      width: 100% !important;
+      display: table;
+      max-width: 100%;
     }}
     .markdown-body img {{
       max-width: 100%;
