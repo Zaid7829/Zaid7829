@@ -140,9 +140,13 @@ def sanitize_icon_xml(svg_path: Path, tech_key: str):
         h = tree.get('height', '128').replace('px', '')
         viewBox = f"0 0 {w} {h}"
     
+    root_fill = tree.get('fill')
+
     inner_strs = []
     for child in tree:
         strip_ns(child)
+        if root_fill and root_fill != 'none' and 'fill' not in child.attrib:
+            child.attrib['fill'] = root_fill
         child_str = ET.tostring(child, encoding='unicode')
         inner_strs.append(child_str)
         
