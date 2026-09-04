@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 64" width="600" height="64" role="img" aria-label="Zaid typewriter name banner">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 46" width="600" height="46" role="img" aria-label="Zaid typewriter name banner">
   <title>Z A I D</title>
   <style>
     .type-text {
@@ -128,109 +128,109 @@
   <!-- Cycle 0: Electric Cyan -->
   <g class="cycle-0">
     <g class="frame-0">
-      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+      <text class="type-text" x="192" y="24"><tspan class="cursor">|</tspan></text>
     </g>
     <g class="frame-1">
-      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-2">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-3">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-4">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
     </g>
   </g>
   <!-- Cycle 1: Terminal Green -->
   <g class="cycle-1">
     <g class="frame-0">
-      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+      <text class="type-text" x="192" y="24"><tspan class="cursor">|</tspan></text>
     </g>
     <g class="frame-1">
-      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-2">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-3">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-4">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
     </g>
   </g>
   <!-- Cycle 2: Cyberpunk Violet -->
   <g class="cycle-2">
     <g class="frame-0">
-      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+      <text class="type-text" x="192" y="24"><tspan class="cursor">|</tspan></text>
     </g>
     <g class="frame-1">
-      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-2">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-3">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-4">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
     </g>
   </g>
   <!-- Cycle 3: Sunset Amber -->
   <g class="cycle-3">
     <g class="frame-0">
-      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+      <text class="type-text" x="192" y="24"><tspan class="cursor">|</tspan></text>
     </g>
     <g class="frame-1">
-      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-2">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-3">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-4">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
     </g>
   </g>
   <!-- Cycle 4: Neon Rose -->
   <g class="cycle-4">
     <g class="frame-0">
-      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+      <text class="type-text" x="192" y="24"><tspan class="cursor">|</tspan></text>
     </g>
     <g class="frame-1">
-      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-2">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-3">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-4">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
     </g>
   </g>
   <!-- Cycle 5: Platinum White -->
   <g class="cycle-5">
     <g class="frame-0">
-      <text class="type-text" x="192" y="34"><tspan class="cursor">|</tspan></text>
+      <text class="type-text" x="192" y="24"><tspan class="cursor">|</tspan></text>
     </g>
     <g class="frame-1">
-      <text class="type-text" x="192" y="34">Z<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-2">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-3">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I<tspan class="cursor">&#160;|</tspan></text>
     </g>
     <g class="frame-4">
-      <text class="type-text" x="192" y="34">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
+      <text class="type-text" x="192" y="24">Z&#160;&#160;A&#160;&#160;I&#160;&#160;D<tspan class="cursor">&#160;|</tspan></text>
     </g>
   </g>
 </svg>

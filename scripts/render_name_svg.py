@@ -53,12 +53,12 @@ TOTAL_DURATION = CYCLE_DURATION * NUM_CYCLES  # 48.0s
 # Start X = 300 - 108 = 192px.
 
 X_START = 192
-Y_POS = 34
+Y_POS = 24
 
 def generate_svg():
     lines = []
     lines.append('<?xml version="1.0" encoding="UTF-8"?>')
-    lines.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 64" width="600" height="64" role="img" aria-label="Zaid typewriter name banner">')
+    lines.append('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 46" width="600" height="46" role="img" aria-label="Zaid typewriter name banner">')
     lines.append('  <title>Z A I D</title>')
     lines.append('  <style>')
     lines.append('    .type-text {')
