@@ -2,13 +2,15 @@
 """
 Generate a self-contained visual developer toolbox SVG.
 Specifications:
-- Visual-only: NO technology text names visible normally
-- Real official SVG logos (48x48px) inside dark grey square containers (76x76px)
-- Container background: #252B33, border: #343B45, border-radius: 10px
-- Generous spacing: 24px gap between containers
-- Category headings: clean, technical, small (e.g. [01] LANGUAGES)
-- Interactive hover: subtle border highlight and minimal tooltip with tech name
-- Output: toolbox.svg (940x890)
+- Visual-only: ZERO technology text names or labels visible underneath tiles
+- Skill-Icons squircle grid aesthetic
+- Square squircle containers: 64x64px, rx=12px
+- Background: #21262D, border: 1px solid #30363D
+- Logos: 44x44px centered inside container, authentic brand colors
+- Gaps: 20px gap between tiles
+- Clean technical category headings: [01] LANGUAGES, [02] FRONTEND, etc.
+- Minimal hover tooltip showing only technology name
+- Output: toolbox.svg (940x850)
 """
 from __future__ import annotations
 import html
@@ -109,7 +111,7 @@ CATEGORIES = [
     }
 ]
 
-W, H = 940, 890
+W, H = 940, 850
 
 def strip_ns(elem):
     if '}' in elem.tag:
@@ -151,42 +153,38 @@ def render_toolbox():
     lines.append('<?xml version="1.0" encoding="UTF-8"?>')
     lines.append(f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="Zaid developer toolbox and visual technology matrix">')
     lines.append('  <title>Zaid — Developer Toolbox</title>')
-    lines.append('  <desc>Visual technology grid featuring official logos inside grey containers without text labels</desc>')
+    lines.append('  <desc>Visual technology squircle grid featuring official logos without text labels</desc>')
     
     # CSS Styles for interactions
     lines.append('  <style>')
-    lines.append('    .icon-container {')
+    lines.append('    .squircle-tile {')
     lines.append('      cursor: pointer;')
     lines.append('      transform-origin: center;')
     lines.append('      transition: transform 0.15s ease;')
     lines.append('    }')
-    lines.append('    .icon-container .box-bg {')
-    lines.append('      fill: #252B33;')
-    lines.append('      stroke: #343B45;')
-    lines.append('      stroke-width: 1.2px;')
+    lines.append('    .squircle-tile .tile-bg {')
+    lines.append('      fill: #21262D;')
+    lines.append('      stroke: #30363D;')
+    lines.append('      stroke-width: 1px;')
     lines.append('      transition: fill 0.15s ease, stroke 0.15s ease;')
     lines.append('    }')
-    lines.append('    .icon-container .logo-svg {')
+    lines.append('    .squircle-tile .logo-svg {')
     lines.append('      transition: transform 0.15s ease;')
     lines.append('    }')
-    lines.append('    .icon-container .tooltip {')
+    lines.append('    .squircle-tile .tooltip {')
     lines.append('      opacity: 0;')
     lines.append('      pointer-events: none;')
     lines.append('      transform: translateY(3px);')
     lines.append('      transition: opacity 0.15s ease, transform 0.15s ease;')
     lines.append('    }')
-    lines.append('    .icon-container:hover {')
-    lines.append('      transform: translateY(-2px);')
+    lines.append('    .squircle-tile:hover {')
+    lines.append('      transform: translateY(-2px) scale(1.05);')
     lines.append('    }')
-    lines.append('    .icon-container:hover .box-bg {')
-    lines.append('      fill: #2D333B;')
+    lines.append('    .squircle-tile:hover .tile-bg {')
+    lines.append('      fill: #262C36;')
     lines.append('      stroke: #58A6FF;')
     lines.append('    }')
-    lines.append('    .icon-container:hover .logo-svg {')
-    lines.append('      transform: scale(1.05);')
-    lines.append('      transform-origin: center;')
-    lines.append('    }')
-    lines.append('    .icon-container:hover .tooltip {')
+    lines.append('    .squircle-tile:hover .tooltip {')
     lines.append('      opacity: 1;')
     lines.append('      transform: translateY(0);')
     lines.append('    }')
@@ -203,20 +201,20 @@ def render_toolbox():
     lines.append('  <circle cx="36" cy="20" r="5" fill="#FFBD2E"/>')
     lines.append('  <circle cx="52" cy="20" r="5" fill="#27C93F"/>')
     lines.append('  <text x="74" y="24" fill="#8B949E" font-family="ui-monospace, monospace" font-size="12">zaid@github:~$ ./toolbox --grid --logos-only</text>')
-    lines.append(f'  <text x="{W-24}" y="24" text-anchor="end" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11" font-weight="600">ACTIVE_STACK // 44 TECHNOLOGIES</text>')
+    lines.append(f'  <text x="{W-24}" y="24" text-anchor="end" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11" font-weight="600">44 TECHNOLOGIES // VISUAL ONLY</text>')
     
-    # Section Title & Subheader
-    lines.append('  <text x="32" y="66" fill="#FF8C00" font-family="ui-monospace, monospace" font-size="13" font-weight="700">~/ 03. toolbox</text>')
-    lines.append('  <text x="144" y="66" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11">Production technology stack and verified engineering capabilities</text>')
-    lines.append(f'  <line x1="32" y1="76" x2="{W-32}" y2="76" stroke="#21262D" stroke-width="1"/>')
+    # Section Header
+    lines.append('  <text x="36" y="66" fill="#FF8C00" font-family="ui-monospace, monospace" font-size="13" font-weight="700">~/ 03. toolbox</text>')
+    lines.append('  <text x="148" y="66" fill="#8B949E" font-family="ui-monospace, monospace" font-size="11">Production technology stack and verified engineering capabilities</text>')
+    lines.append(f'  <line x1="36" y1="76" x2="{W-36}" y2="76" stroke="#21262D" stroke-width="1"/>')
     
-    # Grid Specifications
-    box_size = 76
-    logo_size = 48
-    gap = 24
-    start_x = 32
-    start_y = 104
-    row_pitch = 126  # distance between category tops
+    # Squircle Tile Grid Specs
+    tile_size = 64
+    logo_size = 44
+    gap = 20
+    start_x = 48
+    start_y = 96
+    row_pitch = 120  # distance between category blocks
     
     for cat_idx, cat in enumerate(CATEGORIES):
         cat_y = start_y + cat_idx * row_pitch
@@ -228,12 +226,12 @@ def render_toolbox():
         
         # Category Heading: Small & Technical
         lines.append(f'    <text x="{start_x}" y="{cat_y + 14}" fill="{color}" font-family="ui-monospace, monospace" font-size="11" font-weight="700">[{cat["id"]}] {html.escape(cat_name)}</text>')
-        lines.append(f'    <line x1="{start_x + 190}" y1="{cat_y + 10}" x2="{W - 32}" y2="{cat_y + 10}" stroke="#1F242C" stroke-width="1"/>')
+        lines.append(f'    <line x1="{start_x + 180}" y1="{cat_y + 10}" x2="{W - 48}" y2="{cat_y + 10}" stroke="#1F242C" stroke-width="1"/>')
         
-        # Grid of Large Logo Containers
-        grid_y = cat_y + 26
+        # Row of Squircle Tiles
+        grid_y = cat_y + 24
         for item_idx, item in enumerate(cat["items"]):
-            ix = start_x + item_idx * (box_size + gap)
+            ix = start_x + item_idx * (tile_size + gap)
             iy = grid_y
             
             svg_file = ICONS_DIR / f"{item['key']}.svg"
@@ -243,28 +241,28 @@ def render_toolbox():
                 
             viewBox, inner_xml = sanitize_icon_xml(svg_file, f"{cat['id']}_{item['key']}")
             
-            # Icon Container Group
-            lines.append(f'    <g class="icon-container" role="img" aria-label="{html.escape(item["name"])}">')
+            # Squircle Tile Group
+            lines.append(f'    <g class="squircle-tile" role="img" aria-label="{html.escape(item["name"])}">')
             lines.append(f'      <title>{html.escape(item["name"])}</title>')
             
-            # Grey Square Container (#252B33, subtle #343B45 border, rx=10)
-            lines.append(f'      <rect class="box-bg" x="{ix}" y="{iy}" width="{box_size}" height="{box_size}" rx="10"/>')
+            # Grey Squircle Container (64x64px, rx=12, fill=#21262D, stroke=#30363D)
+            lines.append(f'      <rect class="tile-bg" x="{ix}" y="{iy}" width="{tile_size}" height="{tile_size}" rx="12"/>')
             
-            # Centered Large Technology Logo (48x48px)
-            lx = ix + (box_size - logo_size) / 2
-            ly = iy + (box_size - logo_size) / 2
+            # Centered 44x44px Brand Logo
+            lx = ix + (tile_size - logo_size) / 2
+            ly = iy + (tile_size - logo_size) / 2
             lines.append(f'      <svg class="logo-svg" x="{lx:.1f}" y="{ly:.1f}" width="{logo_size}" height="{logo_size}" viewBox="{viewBox}">')
             lines.append(inner_xml)
             lines.append('      </svg>')
             
-            # Minimal Hover Tooltip (Only technology name)
-            tip_w = max(56, len(item["name"]) * 8 + 16)
-            tip_h = 24
-            tip_x = ix + (box_size - tip_w) / 2
+            # Minimal Hover Tooltip (Technology name only, above tile)
+            tip_w = max(52, len(item["name"]) * 8 + 14)
+            tip_h = 22
+            tip_x = ix + (tile_size - tip_w) / 2
             tip_y = iy - tip_h - 6
             lines.append('      <g class="tooltip">')
-            lines.append(f'        <rect x="{tip_x:.1f}" y="{tip_y:.1f}" width="{tip_w}" height="{tip_h}" rx="4" fill="#161B22" stroke="#484F58" stroke-width="1" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.6))"/>')
-            lines.append(f'        <text x="{tip_x + tip_w/2:.1f}" y="{tip_y + 16:.1f}" text-anchor="middle" fill="#F0F6FC" font-family="ui-monospace, monospace" font-size="10" font-weight="600">{html.escape(item["name"])}</text>')
+            lines.append(f'        <rect x="{tip_x:.1f}" y="{tip_y:.1f}" width="{tip_w}" height="{tip_h}" rx="4" fill="#161B22" stroke="#58A6FF" stroke-width="1" filter="drop-shadow(0 4px 8px rgba(0,0,0,0.6))"/>')
+            lines.append(f'        <text x="{tip_x + tip_w/2:.1f}" y="{tip_y + 15:.1f}" text-anchor="middle" fill="#F0F6FC" font-family="ui-monospace, monospace" font-size="10" font-weight="600">{html.escape(item["name"])}</text>')
             lines.append('      </g>')
             
             lines.append('    </g>')
