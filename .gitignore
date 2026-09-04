@@ -13,3 +13,6 @@ data/source-prepped.png
 # Local previews
 *-preview.svg
 *-preview.png
+
+# Temporary scratch directory
+scratch/
