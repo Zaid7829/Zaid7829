@@ -19,7 +19,6 @@ for jf in json_files:
 
 print("\n=== 3. SVG XML Validation ===")
 svg_files = [
-    "avi-dotmatrix.svg",
     "hero-name.svg",
     "info-card.svg",
     "toolbox.svg",

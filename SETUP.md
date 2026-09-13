@@ -17,7 +17,6 @@ Zaid7829/
 ├── SETUP.md                       # Setup and documentation
 ├── PROJECT_TEMPLATE.md            # Template for adding verified projects
 │
-├── avi-dotmatrix.svg              # Animated high-density particle portrait (760x760)
 ├── hero-name.svg                  # Animated typewriter header (600x64)
 ├── info-card.svg                  # Terminal developer system card (760x304)
 ├── toolbox.svg                    # Technology radar dashboard (940x850)
