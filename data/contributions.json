@@ -1,42 +1,7 @@
 {
   "username": "Zaid7829",
-  "generated_at": "2026-11-21T14:39:24.499653+00:00",
+  "generated_at": "2026-11-22T14:35:14.221147+00:00",
   "days": [
-    {
-      "date": "2025-11-16",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-17",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-18",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-19",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-20",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-21",
-      "count": 0,
-      "level": 0
-    },
-    {
-      "date": "2025-11-22",
-      "count": 0,
-      "level": 0
-    },
     {
       "date": "2025-11-23",
       "count": 0,
@@ -1856,6 +1821,41 @@
       "date": "2026-11-21",
       "count": 0,
       "level": 0
+    },
+    {
+      "date": "2026-11-22",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-23",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-24",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-25",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-26",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-27",
+      "count": 0,
+      "level": 0
+    },
+    {
+      "date": "2026-11-28",
+      "count": 0,
+      "level": 0
     }
   ],
   "stats": {
@@ -1863,7 +1863,7 @@
     "current_streak": 0,
     "longest_streak": 0,
     "best_day": {
-      "date": "2025-11-16",
+      "date": "2025-11-23",
       "count": 0
     },
     "monthly": {
